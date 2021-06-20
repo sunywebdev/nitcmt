@@ -45,7 +45,7 @@ hr {
 /*========== clock section start =============*/
 #clock {
     font-family: 'Share Tech Mono', monospace;
-    color: red;
+    color: #0C3A6D;
     text-align: center;
 }
 
@@ -118,8 +118,6 @@ hr {
     -webkit-box-orient: vertical;
 }
 
-.card .card-text {}
-
 .card .subject-name {
     margin: -0.5rem 0 0.2rem 0 !important;
     color: #73726c;
@@ -147,9 +145,13 @@ hr {
     padding: 0.1rem !important
 }
 
+.old {
+    pointer-events: none;
+    opacity: 50%;
+}
 
 .now {
-    background-color: red !important;
+    opacity: 100%;
 }
 
 

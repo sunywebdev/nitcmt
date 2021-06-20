@@ -23,7 +23,7 @@
             <h2>5th Computer Department</h2>
         </div>
         <!--========== clock section start =============-->
-        <div id="clock">
+        <div class="mt-2" id="clock">
             <p class="date">{{ date }}</p>
             <p class="time">{{ time }}</p>
         </div>
@@ -282,7 +282,11 @@
             let now = new Date();
             n = now.getHours().twoDigits() + ':' + now.getMinutes().twoDigits();
 
-            if (n > '09:00' && n < '10:00') {
+            if (n > '00:00' && n < '01:30') {
+                $(".col-responsive").show();
+                $('.hooray').hide();
+            }
+            else if (n > '09:00' && n < '10:00') {
                 $(".class-1").addClass("now").removeClass("old");
                 $('.hooray').hide();
             }
