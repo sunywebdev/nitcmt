@@ -62,12 +62,9 @@ hr {
 
 /*========== clock section end =============*/
 
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
-
 .hooray {
     text-align: center;
-    font-family: 'Courgette',
-        cursive !important;
+    font-family: cursive !important;
 }
 
 
