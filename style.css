@@ -1,0 +1,124 @@
+* {
+    margin: 0 auto !important;
+}
+
+body {}
+
+.full-body {
+    max-width: 1000px;
+
+}
+
+/*========== clock section start =============*/
+#clock {
+    font-family: 'Share Tech Mono', monospace;
+    color: red;
+    text-align: center;
+}
+
+.time {
+    letter-spacing: 0.05em;
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.date {
+    letter-spacing: 0.1em;
+    font-size: 2rem;
+}
+
+/*========== clock section end =============*/
+
+.card {
+    border: 1px solid red !important;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+
+.card .card-img-top {
+    border: 1px solid transparent;
+    border-radius: 7px;
+}
+
+
+.card-body {
+    padding: 1rem 0.3rem 0.2rem 0.3rem !important;
+    position: relative;
+}
+
+.card-body img {
+    position: absolute;
+    width: 75%;
+    left: 50%;
+    top: -27%;
+    transform: translate(-50%, -27%);
+    border-radius: 50%;
+}
+
+.card-title {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+    font-size: 1.1rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #3c3b37;
+    margin: -0.7rem 0px 0.75rem 0 !important;
+}
+
+.card .card-text {}
+
+.card .subject-name {
+    margin: -0.5rem 0 0.2rem 0 !important;
+    color: #73726c;
+    font-size: 0.8rem;
+}
+
+.card .class-time {
+    color: #be5a0e;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+    font-size: 0.9rem;
+
+}
+
+.card .password {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem !important;
+}
+
+.btn {
+    padding: 0.1rem !important
+}
+
+
+.now {
+    background-color: red !important;
+}
+
+
+@media (max-width:768px) {
+    .col-responsive {
+        width: calc(100% / 2) !important;
+        padding: 10px;
+    }
+
+    .card-body img {
+        width: 55%;
+    }
+}
+
+@media (min-width:768px) {
+    .col-responsive {
+        width: calc(100% / 4) !important;
+        padding: 10px;
+    }
+
+}
