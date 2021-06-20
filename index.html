@@ -307,7 +307,7 @@
             else if (n > '12:00' && n <= '01:30') {
                 $(".class-4").addClass("now").removeClass("old");
                 $('.hooray').hide();
-                $('.countdown').show();
+                $('.countdown').hide();
             }
             else {
                 $(".class-1").addClass("old").removeClass("now");
@@ -318,6 +318,7 @@
                 $('.tuesday').hide();
                 $('.thursday').hide();
                 $('.hooray').show();
+                $('.countdown').show();
             }
         }
         $(document).ready(function () {
