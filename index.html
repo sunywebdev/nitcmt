@@ -27,6 +27,10 @@
             <p class="date">{{ date }}</p>
             <p class="time">{{ time }}</p>
         </div>
+
+        <div class="countdown text-center mt-2">
+            Time Left For Next Days Classes <br><span id='time'></span>
+        </div>
         <!--========== clock section end =============-->
 
 
@@ -241,8 +245,6 @@
 
             </div>
         </div>
-
-
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -253,22 +255,27 @@
         crossorigin="anonymous"></script>
 
     <script>
-        var d = new Date();
-        var DayOfTheWeek = d.getUTCDay();
-        if (DayOfTheWeek == 0) {
+        var DayOfTheWeek = new Date().getDay();
+        if (DayOfTheWeek == 6 || DayOfTheWeek == 0) {
             $('.sunday').show();
-        } else {
-            $('.sunday').hide();
+            $('.hooray').hide();
+            $('.countdown').hide();
         }
-        if (DayOfTheWeek == 2) {
+        else if (DayOfTheWeek == 6 || DayOfTheWeek == 2) {
             $('.tuesday').show();
-        } else {
-            $('.tuesday').hide();
+            $('.hooray').hide();
+            $('.countdown').hide();
         }
-        if (DayOfTheWeek == 4) {
+        else if (DayOfTheWeek == 6 || DayOfTheWeek == 4) {
             $('.thursday').show();
+            $('.hooray').hide();
+            $('.countdown').hide();
         } else {
             $('.thursday').hide();
+            $('.tuesday').hide();
+            $('.sunday').hide();
+            $('.countdown').show();
+            $('.hooray').show();
         }
     </script>
 
@@ -282,25 +289,25 @@
             let now = new Date();
             n = now.getHours().twoDigits() + ':' + now.getMinutes().twoDigits();
 
-            if (n > '00:00' && n < '01:30') {
-                $(".col-responsive").show();
-                $('.hooray').hide();
-            }
-            else if (n > '09:00' && n < '10:00') {
+            if (n > '09:00' && n < '10:00') {
                 $(".class-1").addClass("now").removeClass("old");
                 $('.hooray').hide();
+                $('.countdown').hide();
             }
             else if (n > '10:00' && n < '11:00') {
                 $(".class-2").addClass("now").removeClass("old");
                 $('.hooray').hide();
+                $('.countdown').hide();
             }
             else if (n > '11:30' && n < '12:30') {
                 $(".class-3").addClass("now").removeClass("old");
                 $('.hooray').hide();
+                $('.countdown').hide();
             }
             else if (n > '12:00' && n <= '01:30') {
                 $(".class-4").addClass("now").removeClass("old");
                 $('.hooray').hide();
+                $('.countdown').show();
             }
             else {
                 $(".class-1").addClass("old").removeClass("now");
@@ -347,6 +354,32 @@
             }
             return (zero + num).slice(-digit);
         }
+    </script>
+    <script>
+        (function () {
+            var start = new Date;
+            start.setHours(13, 30, 0); // 13:30pm
+
+            function pad(num) {
+                return ("0" + parseInt(num)).substr(-2);
+            }
+
+            function tick() {
+                var now = new Date;
+                if (now > start) { // too late, go to tomorrow
+                    start.setDate(start.getDate() + 1);
+                }
+                var remain = ((start - now) / 1000);
+                var hh = pad((remain / 60 / 60) % 60);
+                var mm = pad((remain / 60) % 60);
+                var ss = pad(remain % 60);
+                document.getElementById('time').innerHTML =
+                    hh + " : " + mm + " : " + ss;
+                setTimeout(tick, 1000);
+            }
+
+            document.addEventListener('DOMContentLoaded', tick);
+        })();
     </script>
 </body>
 

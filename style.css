@@ -45,7 +45,9 @@ hr {
 /*========== clock section start =============*/
 #clock {
     font-family: 'Share Tech Mono', monospace;
-    color: #0C3A6D;
+    padding: 7px 0 !important;
+    background-color: #0C3A6D;
+    color: #fff;
     text-align: center;
 }
 
@@ -58,6 +60,16 @@ hr {
 .date {
     letter-spacing: 0.1em;
     font-size: 2rem;
+}
+
+.countdown {
+    padding: 7px 0 !important;
+    background-color: #0C3A6D;
+    color: #fff;
+}
+
+.countdown #time {
+    font-size: 4rem;
 }
 
 /*========== clock section end =============*/
