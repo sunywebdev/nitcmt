@@ -20,23 +20,11 @@ body {}
     animation: neonAnim 2s alternate-reverse infinite;
     color: #FBEF00;
     font-family: Cursive;
+    text-shadow: 0 0 5px rgba(251, 239, 0, .7),
+        0 0 20px rgba(251, 239, 0, .7),
+        0 0 60px rgba(251, 239, 0, .7);
 }
 
-@keyframes neonAnim {
-    from {
-        text-shadow:
-            0 0 10px rgba(251, 239, 0, .7),
-            0 0 40px rgba(251, 239, 0, .7),
-            0 0 100px rgba(251, 239, 0, .7);
-    }
-
-    to {
-        text-shadow:
-            0 0 5px rgba(251, 239, 0, .7),
-            0 0 20px rgba(251, 239, 0, .7),
-            0 0 60px rgba(251, 239, 0, .7);
-    }
-}
 
 
 .top h5 {
@@ -73,22 +61,9 @@ body {}
     animation: neonAnim 2s alternate-reverse infinite;
     color: #00FF0C;
     font-family: Cursive;
-}
-
-@keyframes neonAnim {
-    from {
-        text-shadow:
-            0 0 10px rgba(0, 255, 12, .7),
-            0 0 40px rgba(0, 255, 12, .7),
-            0 0 100px rgba(0, 255, 12, .7);
-    }
-
-    to {
-        text-shadow:
-            0 0 5px rgba(0, 255, 12, .7),
-            0 0 20px rgba(0, 255, 12, .7),
-            0 0 60px rgba(0, 255, 12, .7);
-    }
+    text-shadow: 0 0 5px rgba(0, 255, 12, .7),
+        0 0 20px rgba(0, 255, 12, .7),
+        0 0 60px rgba(0, 255, 12, .7);
 }
 
 hr {
