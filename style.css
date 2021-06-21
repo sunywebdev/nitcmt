@@ -41,6 +41,11 @@ body {
 }
 
 .heading {
+    padding: 0 !important;
+}
+
+.heading h3 {
+    font-size: 1.3rem;
     padding: 8px 0 !important;
     background-color: #0B3665;
     color: white;
@@ -48,10 +53,14 @@ body {
 
 }
 
-.heading h3 {
+.heading h2 {
     font-size: 1.3rem;
-}
+    padding: 8px 0 !important;
+    background-color: #0B3665;
+    color: white;
+    border-radius: 15px;
 
+}
 
 
 .heading h2 {
