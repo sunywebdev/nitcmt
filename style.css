@@ -13,6 +13,8 @@ body {
     border: 5px solid white;
     border-radius: 15px;
     color: #0B3665 !important;
+    font-family: 'Josefin Sans',
+        sans-serif !important;
 
 }
 
@@ -26,7 +28,6 @@ body {
     font-size: 2.8rem !important;
     font-weight: 700;
     color: #FBEF00;
-    font-family: 'Josefin Sans', sans-serif;
     display: inline-block;
     padding: 3px 0;
     transform: scale(1, 2);
@@ -37,31 +38,24 @@ body {
 
 .top h5 {
     color: white;
-    font-family: 'Josefin Sans', sans-serif;
 }
 
 .heading {
-    padding: 7px 0 !important;
+    padding: 8px 0 !important;
+    background-color: #0B3665;
+    color: white;
+    border-radius: 15px;
 
 }
 
 .heading h3 {
     font-size: 1.3rem;
-    font-family: 'Josefin Sans', sans-serif;
 }
 
 
 
 .heading h2 {
     font-size: 1.5rem;
-    font-family: 'Josefin Sans', sans-serif;
-}
-
-
-
-.class h2 {
-    padding: 0 0 7px 0;
-    font-family: 'Josefin Sans', sans-serif;
 }
 
 hr {
@@ -123,7 +117,6 @@ hr {
 .hooray {
     text-align: center;
     font-weight: 700;
-    font-family: 'Josefin Sans', sans-serif;
 
 }
 
@@ -216,11 +209,13 @@ hr {
 
 .footer {
     padding: 5px 0;
-    font-family: 'Josefin Sans',
-        sans-serif;
     color: white;
     background-color: #0B3665 !important;
     border-radius: 15px;
+}
+
+.footer b {
+    color: #FBEF00;
 }
 
 @media (max-width:768px) {
