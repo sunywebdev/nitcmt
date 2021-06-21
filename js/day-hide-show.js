@@ -7,7 +7,7 @@
         }
         else if (DayOfTheWeek == 6 || DayOfTheWeek == 2) {
             $('.tuesday').show();
-            $('.tuesday').hide();
+            $('.thursday').hide();
             $('.sunday').hide();
             $('.hooray').hide();
         }
