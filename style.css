@@ -71,6 +71,8 @@ hr {
     font-family: 'Share Tech Mono', monospace;
     padding: 7px 0 !important;
     text-align: center;
+    border: 5px solid #00FF0C !important;
+    width: 350px;
 }
 
 .time {
