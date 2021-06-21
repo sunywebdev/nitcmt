@@ -20,6 +20,10 @@ body {}
     font-weight: 700;
     color: #FBEF00;
     font-family: 'Josefin Sans', sans-serif;
+    display: inline-block;
+    padding: 3px 0;
+    transform: scale(1, 2);
+
 }
 
 
@@ -58,6 +62,7 @@ body {}
 
 hr {
     border-top: 5px dashed #00FF0C !important;
+    width: 50%;
 }
 
 
@@ -197,6 +202,11 @@ hr {
     .card-body img {
         width: 55%;
     }
+
+    hr {
+        width: 100%;
+    }
+
 }
 
 @media (min-width:768px) {
