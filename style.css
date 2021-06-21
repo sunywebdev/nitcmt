@@ -190,6 +190,12 @@ hr {
     opacity: 100%;
 }
 
+.footer {
+    padding: 5px 0;
+    color: #00FF0C;
+    font-family: 'Josefin Sans',
+        sans-serif;
+}
 
 @media (max-width:768px) {
     .col-responsive {
