@@ -73,7 +73,7 @@ hr {
 /*========== clock section start =============*/
 #clock {
     font-family: 'Share Tech Mono', monospace;
-    padding: 19px 0 !important;
+    padding: 19px 0 12px 0 !important;
     text-align: center;
     border: 5px solid #0B3665 !important;
     width: 350px;
