@@ -2,17 +2,24 @@
     margin: 0 auto !important;
 }
 
-body {}
+body {
+    background-color: #0B3665 !important;
+}
 
 .full-body {
     max-width: 1100px;
     min-height: 100vh;
-    background-color: black;
-    color: white;
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 15px;
+    color: #0B3665 !important;
+
 }
 
 .top {
-    padding: 21px 0 !important;
+    padding: 25px 0 15px 0 !important;
+    background-color: #0B3665;
+    border-radius: 15px;
 }
 
 .top h3 {
@@ -29,7 +36,7 @@ body {}
 
 
 .top h5 {
-    color: #00FF0C;
+    color: white;
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -40,7 +47,6 @@ body {}
 
 .heading h3 {
     font-size: 1.3rem;
-    color: #00FF0C;
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -48,7 +54,6 @@ body {}
 
 .heading h2 {
     font-size: 1.5rem;
-    color: #00FF0C;
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -56,12 +61,11 @@ body {}
 
 .class h2 {
     padding: 0 0 7px 0;
-    color: #00FF0C;
     font-family: 'Josefin Sans', sans-serif;
 }
 
 hr {
-    border-top: 5px dashed #00FF0C !important;
+    border-top: 5px dashed #0B3665 !important;
     width: 50%;
 }
 
@@ -69,28 +73,48 @@ hr {
 /*========== clock section start =============*/
 #clock {
     font-family: 'Share Tech Mono', monospace;
-    padding: 7px 0 !important;
+    padding: 19px 0 !important;
     text-align: center;
-    border: 5px solid #00FF0C !important;
+    border: 5px solid #0B3665 !important;
     width: 350px;
+    line-height: 0;
+    border-radius: 15px;
 }
 
-.time {
-    letter-spacing: 0.05em;
-    font-size: 4rem;
-    line-height: 1;
-    color: #00FF0C;
-    font-family: 'Josefin Sans', sans-serif;
-
+#timeContainer1 {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
 }
 
-.date {
-    letter-spacing: 0.1em;
+#timeContainer2 {
+    display: inline-table;
+}
+
+.inline-block {
+    display: inline-block;
+    font-size: 6rem;
+    font-weight: bolder;
+}
+
+.block {
     font-size: 2rem;
+    display: block;
+    font-weight: bolder;
+    line-height: 1;
+    text-align: right;
+}
 
-    color: #00FF0C;
-    font-family: 'Josefin Sans', sans-serif;
+#h-m-container,
+#s-ap-container {
+    display: inline-block;
 
+}
+
+#date {
+    display: block;
+    font-size: 2.4rem;
+    line-height: 1;
 }
 
 /*========== clock section end =============*/
@@ -98,7 +122,6 @@ hr {
 .hooray {
     text-align: center;
     font-weight: 700;
-    color: #00FF0C;
     font-family: 'Josefin Sans', sans-serif;
 
 }
@@ -111,7 +134,7 @@ hr {
 }
 
 .card {
-    border: 1px solid #00FF0C !important;
+    border: 1px solid #0B3665 !important;
     padding: 1px;
     border-radius: 5px;
 }
@@ -192,9 +215,11 @@ hr {
 
 .footer {
     padding: 5px 0;
-    color: #00FF0C;
     font-family: 'Josefin Sans',
         sans-serif;
+    color: white;
+    background-color: #0B3665 !important;
+    border-radius: 15px;
 }
 
 @media (max-width:768px) {
