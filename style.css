@@ -17,20 +17,15 @@ body {}
 .top h3 {
     font-size: 2.8rem !important;
     font-weight: 700;
-    animation: neonAnim 2s alternate-reverse infinite;
     color: #FBEF00;
-    font-family: Cursive;
-    text-shadow: 0 0 5px rgba(251, 239, 0, .7),
-        0 0 20px rgba(251, 239, 0, .7),
-        0 0 60px rgba(251, 239, 0, .7);
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 
 
 .top h5 {
-    animation: neonAnim 2s alternate-reverse infinite;
     color: #00FF0C;
-    font-family: Cursive;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .heading {
@@ -40,36 +35,28 @@ body {}
 
 .heading h3 {
     font-size: 1.3rem;
-    animation: neonAnim 2s alternate-reverse infinite;
     color: #00FF0C;
-    font-family: Cursive;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 
 
 .heading h2 {
     font-size: 1.5rem;
-    animation: neonAnim 2s alternate-reverse infinite;
     color: #00FF0C;
-    font-family: Cursive;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 
 
 .class h2 {
     padding: 0 0 7px 0;
-    animation: neonAnim 2s alternate-reverse infinite;
     color: #00FF0C;
-    font-family: Cursive;
-    text-shadow: 0 0 5px rgba(0, 255, 12, .7),
-        0 0 20px rgba(0, 255, 12, .7),
-        0 0 60px rgba(0, 255, 12, .7);
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 hr {
     border-top: 5px dashed #00FF0C !important;
-    animation: neonAnim 2s alternate-reverse infinite;
-
 }
 
 
@@ -84,18 +71,17 @@ hr {
     letter-spacing: 0.05em;
     font-size: 4rem;
     line-height: 1;
-    animation: neonAnim 2s alternate-reverse infinite;
     color: #00FF0C;
-    font-family: Cursive;
+    font-family: 'Josefin Sans', sans-serif;
 
 }
 
 .date {
     letter-spacing: 0.1em;
     font-size: 2rem;
-    animation: neonAnim 2s alternate-reverse infinite;
+
     color: #00FF0C;
-    font-family: Cursive;
+    font-family: 'Josefin Sans', sans-serif;
 
 }
 
@@ -104,9 +90,8 @@ hr {
 .hooray {
     text-align: center;
     font-weight: 700;
-    animation: neonAnim 2s alternate-reverse infinite;
     color: #00FF0C;
-    font-family: Cursive;
+    font-family: 'Josefin Sans', sans-serif;
 
 }
 
