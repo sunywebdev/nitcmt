@@ -6,48 +6,102 @@ body {}
 
 .full-body {
     max-width: 1100px;
-
+    background-color: black;
+    color: white;
 }
 
 .top {
-    background-color: #0C3A6D;
-    color: #fff;
     padding: 21px 0 !important;
 }
 
 .top h3 {
     font-size: 2.8rem !important;
     font-weight: 700;
-    color: yellow;
+    animation: neonAnim 2s alternate-reverse infinite;
+    color: #FBEF00;
+    font-family: Cursive;
+}
+
+@keyframes neonAnim {
+    from {
+        text-shadow:
+            0 0 10px rgba(251, 239, 0, .7),
+            0 0 40px rgba(251, 239, 0, .7),
+            0 0 100px rgba(251, 239, 0, .7);
+    }
+
+    to {
+        text-shadow:
+            0 0 5px rgba(251, 239, 0, .7),
+            0 0 20px rgba(251, 239, 0, .7),
+            0 0 60px rgba(251, 239, 0, .7);
+    }
+}
+
+
+.top h5 {
+    animation: neonAnim 2s alternate-reverse infinite;
+    color: #00FF0C;
+    font-family: Cursive;
 }
 
 .heading {
     padding: 7px 0 !important;
-    background-color: #0C3A6D;
-    color: #fff;
+
 }
 
 .heading h3 {
-    font-size: 1.5rem
+    font-size: 1.3rem;
+    animation: neonAnim 2s alternate-reverse infinite;
+    color: #00FF0C;
+    font-family: Cursive;
 }
 
+
+
 .heading h2 {
-    font-size: 1.7rem
+    font-size: 1.5rem;
+    animation: neonAnim 2s alternate-reverse infinite;
+    color: #00FF0C;
+    font-family: Cursive;
+}
+
+
+
+.class h2 {
+    padding: 0 0 7px 0;
+    animation: neonAnim 2s alternate-reverse infinite;
+    color: #00FF0C;
+    font-family: Cursive;
+}
+
+@keyframes neonAnim {
+    from {
+        text-shadow:
+            0 0 10px rgba(0, 255, 12, .7),
+            0 0 40px rgba(0, 255, 12, .7),
+            0 0 100px rgba(0, 255, 12, .7);
+    }
+
+    to {
+        text-shadow:
+            0 0 5px rgba(0, 255, 12, .7),
+            0 0 20px rgba(0, 255, 12, .7),
+            0 0 60px rgba(0, 255, 12, .7);
+    }
 }
 
 hr {
-    border: 0 !important;
-    height: 50px !important;
-    background: url(attachments/type_5.jpg) 50% 0 no-repeat !important;
-    margin: -5px 0px 11px 0px !important;
+    border-top: 5px dashed #00FF0C !important;
+    animation: neonAnim 2s alternate-reverse infinite;
+
 }
+
 
 /*========== clock section start =============*/
 #clock {
     font-family: 'Share Tech Mono', monospace;
     padding: 7px 0 !important;
-    background-color: #0C3A6D;
-    color: #fff;
     text-align: center;
 }
 
@@ -55,11 +109,19 @@ hr {
     letter-spacing: 0.05em;
     font-size: 4rem;
     line-height: 1;
+    animation: neonAnim 2s alternate-reverse infinite;
+    color: #00FF0C;
+    font-family: Cursive;
+
 }
 
 .date {
     letter-spacing: 0.1em;
     font-size: 2rem;
+    animation: neonAnim 2s alternate-reverse infinite;
+    color: #00FF0C;
+    font-family: Cursive;
+
 }
 
 /*========== clock section end =============*/
@@ -67,6 +129,10 @@ hr {
 .hooray {
     text-align: center;
     font-weight: 700;
+    animation: neonAnim 2s alternate-reverse infinite;
+    color: #00FF0C;
+    font-family: Cursive;
+
 }
 
 
