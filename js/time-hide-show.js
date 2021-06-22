@@ -81,7 +81,7 @@
                 $(".class-3").addClass("old").removeClass("now");
                 $(".class-4").addClass("old").removeClass("now");
                 $('.hooray').hide();
-                $('.overlay').hide();
+                $('.overlay').show();
                 $('.overlay-2').hide();
               
             }
