@@ -30,6 +30,18 @@
                 $('.class-4 .overlay-2').hide();
                
             }
+            else if (n > '11:00' && n < '11:30') {
+                $(".class-2").addClass("now").removeClass("old");
+                $('.class-1 .overlay').hide();
+                $('.class-2 .overlay').hide();
+                $('.class-3 .overlay').show();
+                $('.class-4 .overlay').show();
+                $('.class-1 .overlay-2').show();
+                $('.class-2 .overlay-2').show();
+                $('.class-3 .overlay-2').hide();
+                $('.class-4 .overlay-2').hide();
+               
+            }   
             else if (n > '11:30' && n < '12:30') {
                 $(".class-3").addClass("now").removeClass("old");
                 $('.class-1 .overlay').hide();
