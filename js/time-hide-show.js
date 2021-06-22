@@ -31,7 +31,7 @@
                
             }
             else if (n > '11:00' && n < '11:30') {
-                $(".class-2").addClass("now").removeClass("old");
+                
                 $('.class-1 .overlay').hide();
                 $('.class-2 .overlay').hide();
                 $('.class-3 .overlay').show();
