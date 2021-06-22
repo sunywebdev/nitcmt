@@ -372,6 +372,18 @@ hr {
     }
 }
 
+@media (min-width: 380px) and (max-width: 576px) {
+    .card-body {
+        padding: 1.8rem 0.3rem 0.2rem 0.3rem !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .card-body {
+        padding: 2.5rem 0.3rem 0.2rem 0.3rem !important;
+    }
+}
+
 @media (min-width:768px) {
     .col-responsive {
         width: calc(100% / 4) !important;
