@@ -7,7 +7,7 @@
             let now = new Date();
             n = now.getHours().twoDigits() + ':' + now.getMinutes().twoDigits();
 
-            if (n > '09:00' && n < '10:00') {
+            if (n > '08:59' && n < '09:59') {
                 $(".class-1").addClass("now").removeClass("old");
                 $('.class-1 .overlay').hide();
                 $('.class-2 .overlay').show();
@@ -18,7 +18,7 @@
                 $('.class-3 .overlay-2').hide();
                 $('.class-4 .overlay-2').hide();
             }
-            else if (n > '10:00' && n < '11:00') {
+            else if (n > '09:59' && n < '10:59') {
                 $(".class-2").addClass("now").removeClass("old");
                 $('.class-1 .overlay').hide();
                 $('.class-2 .overlay').hide();
@@ -30,7 +30,7 @@
                 $('.class-4 .overlay-2').hide();
                
             }
-            else if (n > '11:00' && n < '11:29') {
+            else if (n > '10:59' && n < '11:29') {
                 
                 $('.class-1 .overlay').hide();
                 $('.class-2 .overlay').hide();
@@ -42,7 +42,7 @@
                 $('.class-4 .overlay-2').hide();
                
             }   
-            else if (n > '11:30' && n < '12:30') {
+            else if (n > '11:29' && n < '12:29') {
                 $(".class-3").addClass("now").removeClass("old");
                 $('.class-1 .overlay').hide();
                 $('.class-2 .overlay').hide();
@@ -55,7 +55,7 @@
                 
                 
             }
-            else if (n > '12:30' && n < '13:30') {
+            else if (n > '12:29' && n < '13:29') {
                 $(".class-4").addClass("now").removeClass("old");
                 $('.class-1 .overlay').hide();
                 $('.class-2 .overlay').hide();
@@ -67,7 +67,7 @@
                 $('.class-4 .overlay-2').hide();
             
             }
-            else if (n > '13:30' && n <= '23:59') {
+            else if (n > '13:29' && n <= '23:59') {
                 $('.sunday').hide();
                 $('.tuesday').hide();
                 $('.thursday').hide();
