@@ -374,6 +374,9 @@ hr {
         width: 100%;
     }
 
+    #clock {
+        width: 97vw !important;
+    }
 }
 
 @media (min-width:768px) {
