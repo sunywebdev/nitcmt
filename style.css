@@ -144,7 +144,7 @@ body {
 
 .inline-block {
     display: inline-block;
-    font-size: 5.5rem;
+    font-size: 5.4rem;
     font-weight: bolder;
 }
 
@@ -164,7 +164,7 @@ body {
 
 #date {
     display: block;
-    font-size: 2.4rem;
+    font-size: 2.3rem;
     line-height: 1.2;
     letter-spacing: -1px;
 }
