@@ -309,7 +309,8 @@ hr {
     opacity: 100%;
 }
 
-.overlay {
+.overlay,
+.overlay-2 {
     position: absolute;
     top: 50%;
     left: 50%;
