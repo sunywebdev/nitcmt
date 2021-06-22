@@ -30,7 +30,7 @@
                 $('.class-4 .overlay-2').hide();
                
             }
-            else if (n > '11:00' && n < '11:30') {
+            else if (n > '11:00' && n < '11:29') {
                 
                 $('.class-1 .overlay').hide();
                 $('.class-2 .overlay').hide();
