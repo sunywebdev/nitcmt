@@ -80,7 +80,7 @@
                 $(".class-2").addClass("old").removeClass("now");
                 $(".class-3").addClass("old").removeClass("now");
                 $(".class-4").addClass("old").removeClass("now");
-                $('.hooray').show();
+
                 $('.overlay').show();
                 $('.overlay-2').hide();
               
