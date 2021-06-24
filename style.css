@@ -308,8 +308,8 @@ hr {
     opacity: 100%;
 }
 
-.overlay,
-.overlay-2 {
+.class-will-start,
+.class-ended {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -321,7 +321,7 @@ hr {
     width: 70%;
 }
 
-.overlay-2 {
+.class-ended {
     color: #EB0000 !important;
 }
 

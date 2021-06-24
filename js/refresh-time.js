@@ -13,9 +13,11 @@
 
             var timeout = (then.getTime() - now.getTime());
             setTimeout(function () { window.location.reload(true); }, timeout);
-        }
+}
+        refreshAt(00, 00, 00);
         refreshAt(09, 00, 00);
         refreshAt(10, 00, 00); 
         refreshAt(11, 00, 00);
         refreshAt(11, 30, 00); 
-        refreshAt(12, 30, 00); 
+        refreshAt(12, 30, 00);
+        refreshAt(13, 30, 00);
