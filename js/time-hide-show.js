@@ -17,7 +17,19 @@
                 $('.exam-1 .class-ended').hide();
                 $('.exam-2 .class-ended').hide();
                 $('.exam-3 .class-ended').hide();
-                $('.exam-4 .class-ended').hide();
+            $('.exam-4 .class-ended').hide();
+             $('.sunday').hide();
+                $('.tuesday').hide();
+                $('.thursday').hide();
+                $('.hooray').show();
+                $('.class-1 .class-will-start').hide();
+                $('.class-2 .class-will-start').hide();
+                $('.class-3 .class-will-start').hide();
+                $('.class-4 .class-will-start').hide();
+                $('.class-1 .class-ended').hide();
+                $('.class-2 .class-ended').hide();
+                $('.class-3 .class-ended').hide();
+                $('.class-4 .class-ended').hide();
         }
 
         else if ((d === 0) && (n > '11:15:00' && n < '12:15:00')) {
@@ -29,7 +41,19 @@
                 $('.exam-1 .class-ended').hide();
                 $('.exam-2 .class-ended').hide();
                 $('.exam-3 .class-ended').hide();
-                $('.exam-4 .class-ended').hide();
+            $('.exam-4 .class-ended').hide();
+             $('.sunday').hide();
+                $('.tuesday').hide();
+                $('.thursday').hide();
+                $('.hooray').show();
+                $('.class-1 .class-will-start').hide();
+                $('.class-2 .class-will-start').hide();
+                $('.class-3 .class-will-start').hide();
+                $('.class-4 .class-will-start').hide();
+                $('.class-1 .class-ended').hide();
+                $('.class-2 .class-ended').hide();
+                $('.class-3 .class-ended').hide();
+                $('.class-4 .class-ended').hide();
         }
         else if ((d === 0) && (n > '01:00:00' && n < '23:59:59')) {
                 $('.exam-1 .class-will-start').hide();
@@ -39,7 +63,19 @@
                 $('.exam-1 .class-ended').show();
                 $('.exam-2 .class-ended').hide();
                 $('.exam-3 .class-ended').hide();
-                $('.exam-4 .class-ended').hide();
+            $('.exam-4 .class-ended').hide();
+             $('.sunday').hide();
+                $('.tuesday').hide();
+                $('.thursday').hide();
+                $('.hooray').show();
+                $('.class-1 .class-will-start').hide();
+                $('.class-2 .class-will-start').hide();
+                $('.class-3 .class-will-start').hide();
+                $('.class-4 .class-will-start').hide();
+                $('.class-1 .class-ended').hide();
+                $('.class-2 .class-ended').hide();
+                $('.class-3 .class-ended').hide();
+                $('.class-4 .class-ended').hide();
         }
 
             
