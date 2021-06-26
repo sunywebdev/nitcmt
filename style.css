@@ -26,7 +26,7 @@ hr {
 .top {
     padding: 25px 0 15px 0 !important;
     background-color: #0B3665;
-    border-radius: 15px;
+    border-radius: 15px 15px 0 0;
 }
 
 .top h3 {
@@ -54,7 +54,6 @@ hr {
     padding: 8px 0 !important;
     background-color: #0B3665;
     color: white;
-    border-radius: 15px;
 
 }
 
@@ -63,8 +62,7 @@ hr {
     padding: 8px 0 !important;
     background-color: #0B3665;
     color: white;
-    border-radius: 15px;
-
+    margin-top: -4px !important;
 }
 
 
@@ -392,16 +390,87 @@ hr {
     padding: 5px 0;
     color: white;
     background-color: #0B3665 !important;
-    border-radius: 15px;
+    border-radius: 0 0 15px 15px;
     letter-spacing: -1px;
 }
+
+.media-icons {
+    display: flex;
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+}
+
+.media-icons a {
+    height: 35px;
+    width: 35px;
+    margin: 0 8px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff !important;
+    font-size: 17px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.media-icons a:nth-child(1) {
+    background: #4267B2;
+}
+
+.media-icons a:nth-child(1):hover {
+    color: #4267B2 !important;
+    background: #fff;
+}
+
+.media-icons a:nth-child(2) {
+    background: #1DA1F2;
+}
+
+.media-icons a:nth-child(2):hover {
+    color: #1DA1F2 !important;
+    background: #fff;
+}
+
+.media-icons a:nth-child(3) {
+    background: #F7B300;
+}
+
+.media-icons a:nth-child(3):hover {
+    color: #F7B300 !important;
+    background: #fff;
+}
+
+.media-icons a:nth-child(4) {
+    background: #0078D4;
+}
+
+.media-icons a:nth-child(4):hover {
+    color: #0078D4 !important;
+    background: #fff;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.media-icons a:nth-child(5) {
+    font-size: 22px;
+    background-color: #1DBF73;
+    line-height: 1.5 !important;
+    font-family: 'Roboto',
+        sans-serif;
+}
+
+.media-icons a:nth-child(5):hover {
+    color: #1DBF73 !important;
+    background: #fff;
+}
+
 
 .footer p {
     margin-bottom: 0rem !important;
 }
 
 .footer a {
-    color: #FBEF00 !important;
+    color: #FBEF00;
     text-decoration: none !important;
 }
 
