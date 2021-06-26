@@ -8,8 +8,45 @@
             n = now.getHours().threeDigits() + ':' + now.getMinutes().threeDigits() + ':' + now.getSeconds().threeDigits();
         const d = now.getDay()
         
-        /***************** before Class time start ******************/
-            if ((d === 0) && (n > '00:00:00' && n < '09:00:00')) {
+
+        if ((d === 0) && (n > '00:00:00' && n < '11:15:00')) {
+                $('.exam-1 .class-will-start').show();
+                $('.exam-2 .class-will-start').show();
+                $('.exam-3 .class-will-start').show();
+                $('.exam-4 .class-will-start').show();
+                $('.exam-1 .class-ended').hide();
+                $('.exam-2 .class-ended').hide();
+                $('.exam-3 .class-ended').hide();
+                $('.exam-4 .class-ended').hide();
+        }
+
+        else if ((d === 0) && (n > '11:15:00' && n < '12:15:00')) {
+                $(".exam-1").addClass("now").removeClass("old");
+                $('.exam-1 .class-will-start').hide();
+                $('.exam-2 .class-will-start').show();
+                $('.exam-3 .class-will-start').show();
+                $('.exam-4 .class-will-start').show();
+                $('.exam-1 .class-ended').hide();
+                $('.exam-2 .class-ended').hide();
+                $('.exam-3 .class-ended').hide();
+                $('.exam-4 .class-ended').hide();
+        }
+        else if ((d === 0) && (n > '01:00:00' && n < '23:59:59')) {
+                $('.exam-1 .class-will-start').hide();
+                $('.exam-2 .class-will-start').show();
+                $('.exam-3 .class-will-start').show();
+                $('.exam-4 .class-will-start').show();
+                $('.exam-1 .class-ended').show();
+                $('.exam-2 .class-ended').hide();
+                $('.exam-3 .class-ended').hide();
+                $('.exam-4 .class-ended').hide();
+        }
+
+            
+
+        /***************** before Class time start ******************/   
+
+           else if ((d === 0) && (n > '00:00:00' && n < '09:00:00')) {
                 $('.sunday').show();
                 $('.tuesday').hide();
                 $('.thursday').hide();
