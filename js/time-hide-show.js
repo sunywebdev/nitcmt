@@ -10,11 +10,11 @@
         
 
         if ((d === 0) && (n > '00:00:00' && n < '11:15:00')) {
-                $('.exam-1 .class-will-start').show();
+                $('.exam-1 .class-will-start').hide();
                 $('.exam-2 .class-will-start').show();
                 $('.exam-3 .class-will-start').show();
                 $('.exam-4 .class-will-start').show();
-                $('.exam-1 .class-ended').hide();
+                $('.exam-1 .class-ended').show();
                 $('.exam-2 .class-ended').hide();
                 $('.exam-3 .class-ended').hide();
                 $('.exam-4 .class-ended').hide();
@@ -35,10 +35,10 @@
         else if ((d === 0) && (n > '11:15:00' && n < '13:00:00')) {
                 $(".exam-1").addClass("now").removeClass("old");
                 $('.exam-1 .class-will-start').hide();
-                $('.exam-2 .class-will-start').show();
+                $('.exam-2 .class-will-start').hide();
                 $('.exam-3 .class-will-start').show();
                 $('.exam-4 .class-will-start').show();
-                $('.exam-1 .class-ended').hide();
+                $('.exam-1 .class-ended').show();
                 $('.exam-2 .class-ended').hide();
                 $('.exam-3 .class-ended').hide();
                 $('.exam-4 .class-ended').hide();
@@ -61,7 +61,7 @@
                 $('.exam-3 .class-will-start').show();
                 $('.exam-4 .class-will-start').show();
                 $('.exam-1 .class-ended').show();
-                $('.exam-2 .class-ended').hide();
+                $('.exam-2 .class-ended').show();
                 $('.exam-3 .class-ended').hide();
                 $('.exam-4 .class-ended').hide();
                 $('.sunday').hide();
