@@ -61,7 +61,7 @@
                 $('.exam-3 .class-will-start').show();
                 $('.exam-4 .class-will-start').show();
                 $('.exam-1 .class-ended').show();
-                $('.exam-2 .class-ended').show();
+                $('.exam-2 .class-ended').hide();
                 $('.exam-3 .class-ended').hide();
                 $('.exam-4 .class-ended').hide();
                 $('.sunday').hide();
