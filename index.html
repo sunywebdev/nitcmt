@@ -503,7 +503,7 @@
                 </div>
                 <div class="col-md-12 col-xs-12 form">
                     <form method="post" role="form"
-                        action="https://script.google.com/macros/s/AKfycbwtLbTgUDGQxi9FY8Jks6bJs3TnYPBNU7rvO8b8_zrdyD4Pa6g/exec"
+                        action="https://script.google.com/macros/s/AKfycbxY4Xc6BGlOXLRrW2klIxoO31KWZs5QlZhfs54L/exec"
                         method="post" role="form" class="gform " data-email="suny.w68@gmail.com">
                         <div class="form-row">
                             <div class="col form-group">
@@ -559,7 +559,72 @@
         </div>
         <!--=========== Footer Section End ===============-->
 
-
+        <div class="modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center justify-content-center">
+                        <h2>Submit Your Info</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" role="form"
+                            action="https://script.google.com/macros/s/AKfycbxY4Xc6BGlOXLRrW2klIxoO31KWZs5QlZhfs54L/exec"
+                            method="post" role="form" class="gform " data-email="suny.w68@gmail.com">
+                            <div class="form-row">
+                                <div class="col-12 form-group">
+                                    <input type="text" name="name" class="form-control" id="name"
+                                        placeholder="Your Name" minlength="4"
+                                        oninvalid=" this.setCustomValidity('Please enter a valid Name')"
+                                        oninput="this.setCustomValidity('')" required="true" />
+                                </div>
+                                <div class="col-12 form-group">
+                                    <input type="text" name="Semester" class="form-control" id="name"
+                                        placeholder="Your Semester" minlength="1"
+                                        oninvalid=" this.setCustomValidity('Please enter valid Semester (EX:- 5th)')"
+                                        oninput="this.setCustomValidity('')" required="true" />
+                                </div>
+                                <div class="col-12 form-group">
+                                    <input type="text" name="Department" class="form-control" id="name"
+                                        placeholder="Your Department" minlength="3 "
+                                        oninvalid=" this.setCustomValidity('Please enter valid Department(EX:- Computer)')"
+                                        oninput="this.setCustomValidity('')" required="true" />
+                                </div>
+                                <div class="col-12 form-group">
+                                    <input type="text" name="Section" class="form-control" id="name"
+                                        placeholder="Your Section" minlength="1"
+                                        oninvalid=" this.setCustomValidity('Please enter valid section(EX:- A or B)')"
+                                        oninput="this.setCustomValidity('')" required="true" />
+                                </div>
+                                <div class="col-12 form-group">
+                                    <input type="number" name="Roll Number" class="form-control" id="name"
+                                        placeholder="Your Roll Number" minlength="6"
+                                        oninvalid=" this.setCustomValidity('Please enter valid Roll Number')"
+                                        oninput="this.setCustomValidity('')" required="true" />
+                                </div>
+                                <div class="col-12 form-group">
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        placeholder="Your Email" data-rule="email"
+                                        oninvalid=" this.setCustomValidity('Please enter a valid email ')"
+                                        oninput="this.setCustomValidity('')" required="true" />
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="text-center col-6 px-1">
+                                    <button type="submit" class="btn submit">Submit Info</button>
+                                </div>
+                                <div class="text-center col-6 px-1">
+                                    <button type="reset" class="btn reset">Reset Info</button>
+                                </div>
+                            </div>
+                            <div style="display:none" class="thankyou_message">
+                                <button class="close" role="alert"><b>Your Info Successfully Saved.</b>
+                                    Click to close this Form
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src=" https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -571,17 +636,20 @@
     <script data-cfasync="false" type="text/javascript"
         src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
     <script>
+        $(document).on('hidden.bs.modal', '#Control_id', function (event) {
+            window.setTimeout(function () {
+                window.location.reload();
+            }, 60000);
+        });
+    </script>
+    <script>
         $(document).ready(function () {
             $(".alert").on("mouseenter", function () {
                 location.reload();
             });
 
         });
-    </script>
-    <script>
-        window.setTimeout(function () {
-            window.location.reload();
-        }, 60000);
+
     </script>
     <script src="js/refresh-time.js"></script>
     <script src="js/time-hide-show.js"></script>
@@ -589,7 +657,23 @@
     <script src="js/copy-protect.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/share-api.js"></script>
+    <script>
+        $(document).ready(function () {
+            var isshow = localStorage.getItem('isshow');
+            if (isshow == null) {
+                localStorage.setItem('isshow', 1);
 
+                // Show popup here
+                $('.modal').modal('show');
+            }
+            else {
+
+            }
+        });
+        $('.close').click(function () {
+            $('.modal').modal('hide');
+        });
+    </script>
 </body>
 
 </html>
