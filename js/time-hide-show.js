@@ -6,10 +6,10 @@
             // get current date and time (d === 1 || d === 3 || d === 5 || d === 6)
             let now = new Date();
             n = now.getHours().threeDigits() + ':' + now.getMinutes().threeDigits() + ':' + now.getSeconds().threeDigits();
-        const d = now.getDay()
+            const d = now.getDay()
         
 
-        if ((d === 0) && (n > '00:00:00' && n < '11:15:00')) {
+        if ((d === 1) && (n > '00:00:00' && n < '11:15:00')) {
                 $('.exam-1 .class-will-start').hide();
                 $('.exam-2 .class-will-start').show();
                 $('.exam-3 .class-will-start').show();
@@ -32,7 +32,7 @@
                 $('.class-4 .class-ended').hide();
         }
 
-        else if ((d === 0) && (n > '11:15:00' && n < '13:00:00')) {
+        else if ((d === 1) && (n > '11:15:00' && n < '13:00:00')) {
                 $(".exam-1").addClass("now").removeClass("old");
                 $('.exam-1 .class-will-start').hide();
                 $('.exam-2 .class-will-start').hide();
@@ -55,13 +55,13 @@
                 $('.class-3 .class-ended').hide();
                 $('.class-4 .class-ended').hide();
         }
-        else if ((d === 0) && (n > '13:00:00' && n < '23:59:59')) {
+        else if ((d === 1) && (n > '13:00:00' && n < '23:59:59')) {
                 $('.exam-1 .class-will-start').hide();
-                $('.exam-2 .class-will-start').show();
+                $('.exam-2 .class-will-start').hide();
                 $('.exam-3 .class-will-start').show();
                 $('.exam-4 .class-will-start').show();
                 $('.exam-1 .class-ended').show();
-                $('.exam-2 .class-ended').hide();
+                $('.exam-2 .class-ended').show();
                 $('.exam-3 .class-ended').hide();
                 $('.exam-4 .class-ended').hide();
                 $('.sunday').hide();
