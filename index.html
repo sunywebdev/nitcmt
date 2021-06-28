@@ -667,7 +667,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script>
         if ($.cookie('popup') != 'seen') {
-            $.cookie('popup', 'seen', { expires: 365, path: '/' }); // Set it to last a year, for example.
+            // Set it to last a year, for example.
             $(".modal").modal('show');
             $('.close').click(function (e) // You are clicking the close button
             {
