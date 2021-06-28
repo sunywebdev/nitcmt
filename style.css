@@ -372,7 +372,7 @@ hr {
 }
 
 .class-ended {
-    color: green !important;
+    color: #EB0000 !important;
     text-shadow: 1px 1px 20px red;
 }
 
