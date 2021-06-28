@@ -364,7 +364,8 @@ hr {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 999;
-    color: Green;
+    color: #0B3665;
+    text-shadow: 1px 1px 11px #0B3665;
     font-size: 1.2rem;
     font-weight: 900;
     width: 70%;
@@ -372,6 +373,7 @@ hr {
 
 .class-ended {
     color: #EB0000 !important;
+    text-shadow: 1px 1px 20px red;
 }
 
 /*=========== Routine Section End ===============*/
