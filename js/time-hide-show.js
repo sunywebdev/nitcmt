@@ -33,7 +33,7 @@
         }
 
         else if ((d === 1) && (n > '11:15:00' && n < '13:00:00')) {
-                $(".exam-1").addClass("now").removeClass("old");
+                $(".exam-2").addClass("now").removeClass("old");
                 $('.exam-1 .class-will-start').hide();
                 $('.exam-2 .class-will-start').hide();
                 $('.exam-3 .class-will-start').show();
