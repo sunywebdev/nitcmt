@@ -666,18 +666,27 @@
     <script src="js/share-api.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script>
+        // Delayed Modal Display + Cookie On Click
         $(document).ready(function () {
-            if (localStorage.getItem('dismiss') != 'shown') {
-                $('.modal').modal('show');
-                localStorage.setItem('dismiss', 'shown')
+
+            // If no cookie with our chosen class...
+            if ($.cookie("dismiss") == null) {
+
+                // Show the modal, with the delay function
+                $('.modal').appendTo("body");
+                function show_modal() {
+                    $('.modal').modal();
+                }
+
+                // Set the delay function time in milliseconds
+                window.setTimeout(show_modal, 300);
             }
 
-            $('.close').click(function () // You are clicking the close button
-            {
-                $('.modal').modal('hide'); // Now the pop up is hidden.
+            // On click of the chosen class, trigger the cookie
+            $(".close").mouseenter(function () {
+                document.cookie = "dismiss=true";
             });
         });
-
 
     </script>
 
