@@ -616,7 +616,7 @@
                                 </div>
                             </div>
                             <div style="display:none" class="thankyou_message">
-                                <div class="alert" role="alert"><b>Your Info Successfully Saved.</b>
+                                <div class="alert close" role="alert"><b>Your Info Successfully Saved.</b>
                                     Click to close this Form
                                 </div>
                             </div>
@@ -657,20 +657,32 @@
     <script src="js/copy-protect.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/share-api.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script>
+        // Delayed Modal Display + Cookie On Click
         $(document).ready(function () {
-            var isshow = localStorage.getItem('isshow');
-            if (isshow == null) {
-                localStorage.setItem('isshow', 1);
 
-                // Show popup here
-                $('.modal').modal('show');
-            }
-            else {
+            // If no cookie with our chosen class...
+            if ($.cookie("dismiss") == null) {
 
+                // Show the modal, with the delay function
+                $('.modal').appendTo("body");
+                function show_modal() {
+                    $('.modal').modal();
+                }
+
+                // Set the delay function time in milliseconds
+                window.setTimeout(show_modal, 300);
             }
+
+            // On click of the chosen class, trigger the cookie
+            $(".close").mouseenter(function () {
+                document.cookie = "dismiss=true";
+            });
         });
+
     </script>
+
 </body>
 
 </html>
