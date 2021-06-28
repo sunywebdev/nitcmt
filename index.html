@@ -664,31 +664,20 @@
     <script src="js/copy-protect.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/share-api.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"
-        integrity="sha512-aUhL2xOCrpLEuGD5f6tgHbLYEXRpYZ8G5yD+WlFrXrPy2IrWBlu6bih5C9H6qGsgqnU6mgx6KtU8TreHpASprw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script>
-        // Delayed Modal Display + Cookie On Click
         $(document).ready(function () {
-
-            // If no cookie with our chosen class...
-            if ($.cookie("dismiss") == null) {
-
-                // Show the modal, with the delay function
-                $('.modal').appendTo("body");
-                function show_modal() {
-                    $('.modal').modal();
-                }
-
-                // Set the delay function time in milliseconds
-                window.setTimeout(show_modal, 300);
+            if (localStorage.getItem('dismiss') != 'shown') {
+                $('.modal').modal('show');
+                localStorage.setItem('dismiss', 'shown')
             }
 
-            // On click of the chosen class, trigger the cookie
-            $(".close").mouseenter(function () {
-                document.cookie = "dismiss=true";
+            $('.close').click(function () // You are clicking the close button
+            {
+                $('.modal').modal('hide'); // Now the pop up is hidden.
             });
         });
+
 
     </script>
 
