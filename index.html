@@ -669,12 +669,9 @@
         if ($.cookie('popups') != 'seen') {
             // Set it to last a year, for example.
             $(".modal").modal('show');
-            $('.close').click(function (e) // You are clicking the close button
+            $('.close').on("mouseenter", function ()// You are clicking the close button
             {
                 $(".modal").modal('hide'); // Now the pop up is hiden.
-            });
-            $('.modal').click(function (e) {
-                $(".modal").modal('hide');
             });
         };
 
