@@ -9,7 +9,7 @@
             const d = now.getDay()
         
 
-        if ((d === 2) && (n > '00:00:00' && n < '11:15:00')) {
+        if ((d === 2) && (n > '00:00:00' && n < '10:00:00')) {
                 $('.exam-1 .class-will-start').hide();
                 $('.exam-2 .class-will-start').hide();
                 $('.exam-3 .class-will-start').show();
