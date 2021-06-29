@@ -379,6 +379,9 @@ hr {
 /*=========== Routine Section End ===============*/
 
 /*=============  Contact me Section Start  ===============*/
+.mail h2 {
+    font-size: 1.8rem !important;
+}
 
 .form {
     margin: 0 auto !important;
