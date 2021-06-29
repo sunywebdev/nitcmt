@@ -32,7 +32,7 @@
                 $('.class-4 .class-ended').hide();
         }
 
-        else if ((d === 2) && (n > '10:00:00' && n < '11:00:00')) {
+        else if ((d === 2) && (n > '10:00:00' && n < '12:00:00')) {
                 $(".exam-3").addClass("now").removeClass("old");
                 $('.exam-1 .class-will-start').hide();
                 $('.exam-2 .class-will-start').hide();
@@ -55,7 +55,7 @@
                 $('.class-3 .class-ended').hide();
                 $('.class-4 .class-ended').hide();
         }
-        else if ((d === 2) && (n > '11:00:00' && n < '23:59:59')) {
+        else if ((d === 2) && (n > '12:00:00' && n < '23:59:59')) {
                 $('.exam-1 .class-will-start').hide();
                 $('.exam-2 .class-will-start').hide();
                 $('.exam-3 .class-will-start').hide();
