@@ -6,10 +6,10 @@
             // get current date and time (d === 1 || d === 3 || d === 5 || d === 6)
             let now = new Date();
             n = now.getHours().threeDigits() + ':' + now.getMinutes().threeDigits() + ':' + now.getSeconds().threeDigits();
-            const d = now.getDay()
+            const d = now.getDay();
         
 
-        if ((d === 3 && (n > '00:00:00' && n < '11:00:00')) {
+        if ((d === 3) && (n > '00:00:00' && n < '11:00:00')) {
                 $('.exam-1 .class-will-start').hide();
                 $('.exam-2 .class-will-start').hide();
                 $('.exam-3 .class-will-start').hide();
