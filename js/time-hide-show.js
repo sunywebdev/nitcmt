@@ -8,81 +8,11 @@
             n = now.getHours().threeDigits() + ':' + now.getMinutes().threeDigits() + ':' + now.getSeconds().threeDigits();
             const d = now.getDay();
         
-
-        if ((d === 3) && (n > '00:00:00' && n < '11:00:00')) {
-                $('.exam-1 .class-will-start').hide();
-                $('.exam-2 .class-will-start').hide();
-                $('.exam-3 .class-will-start').hide();
-                $('.exam-4 .class-will-start').show();
-                $('.exam-1 .class-ended').show();
-                $('.exam-2 .class-ended').show();
-                $('.exam-3 .class-ended').show();
-                $('.exam-4 .class-ended').hide();
-                $('.sunday').hide();
-                $('.tuesday').hide();
-                $('.thursday').hide();
-                $('.hooray').show();
-                $('.class-1 .class-will-start').hide();
-                $('.class-2 .class-will-start').hide();
-                $('.class-3 .class-will-start').hide();
-                $('.class-4 .class-will-start').hide();
-                $('.class-1 .class-ended').hide();
-                $('.class-2 .class-ended').hide();
-                $('.class-3 .class-ended').hide();
-                $('.class-4 .class-ended').hide();
-        }
-
-        else if ((d === 3) && (n > '11:00:00' && n < '13:00:00')) {
-                $(".exam-4").addClass("now").removeClass("old");
-                $('.exam-1 .class-will-start').hide();
-                $('.exam-2 .class-will-start').hide();
-                $('.exam-3 .class-will-start').hide();
-                $('.exam-4 .class-will-start').hide();
-                $('.exam-1 .class-ended').show();
-                $('.exam-2 .class-ended').show();
-                $('.exam-3 .class-ended').show();
-                $('.exam-4 .class-ended').hide();
-                $('.sunday').hide();
-                $('.tuesday').hide();
-                $('.thursday').hide();
-                $('.hooray').show();
-                $('.class-1 .class-will-start').hide();
-                $('.class-2 .class-will-start').hide();
-                $('.class-3 .class-will-start').hide();
-                $('.class-4 .class-will-start').hide();
-                $('.class-1 .class-ended').hide();
-                $('.class-2 .class-ended').hide();
-                $('.class-3 .class-ended').hide();
-                $('.class-4 .class-ended').hide();
-        }
-        else if ((d === 3) && (n > '13:00:00' && n < '23:59:59')) {
-                $('.exam-1 .class-will-start').hide();
-                $('.exam-2 .class-will-start').hide();
-                $('.exam-3 .class-will-start').hide();
-                $('.exam-4 .class-will-start').hide();
-                $('.exam-1 .class-ended').show();
-                $('.exam-2 .class-ended').show();
-                $('.exam-3 .class-ended').show();
-                $('.exam-4 .class-ended').show();
-                $('.sunday').hide();
-                $('.tuesday').hide();
-                $('.thursday').hide();
-                $('.hooray').show();
-                $('.class-1 .class-will-start').hide();
-                $('.class-2 .class-will-start').hide();
-                $('.class-3 .class-will-start').hide();
-                $('.class-4 .class-will-start').hide();
-                $('.class-1 .class-ended').hide();
-                $('.class-2 .class-ended').hide();
-                $('.class-3 .class-ended').hide();
-                $('.class-4 .class-ended').hide();
-        }
-
             
  
         /***************** before Class time start ******************/   
 
-           else if ((d === 0) && (n > '00:00:00' && n < '09:00:00')) {
+         if ((d === 0) && (n > '00:00:00' && n < '09:00:00')) {
                 $('.sunday').show();
                 $('.tuesday').hide();
                 $('.thursday').hide();
@@ -418,7 +348,8 @@
                 $('.class-4 .class-ended').show();
             
             }
-                /***************** after Class end ******************/
+             /***************** after Class end ******************/
+             
 
             else {
                 $('.sunday').hide();
@@ -438,3 +369,11 @@
         $(document).ready(function () {
             running();
         });
+                $('.exam-1 .class-will-start').hide();
+                $('.exam-2 .class-will-start').hide();
+                $('.exam-3 .class-will-start').hide();
+                $('.exam-4 .class-will-start').hide();
+                $('.exam-1 .class-ended').show();
+                $('.exam-2 .class-ended').show();
+                $('.exam-3 .class-ended').show();
+                $('.exam-4 .class-ended').show();
