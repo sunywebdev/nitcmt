@@ -265,19 +265,7 @@ hr {
     border-radius: 5px;
 }
 
-.card:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 101%;
-    height: 101%;
-    border: 2px solid #0B3665 !important;
-    padding: 1px;
-    border-radius: 5px;
-    z-index: 999;
-}
+
 
 .card .card-img-top {
     border: 1px solid transparent;
