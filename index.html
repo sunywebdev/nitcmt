@@ -65,8 +65,10 @@
 </head>
 
 <body>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
     <div class="full-body mt-md-5 mb-md-5">
-
         <!--=============  Share button start  ===============-->
         <div class="container">
             <div id="share"> </div>
@@ -720,7 +722,18 @@
     <script src="js/share-api.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
+    <script>
+        function progressBarScroll() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
+                height = document.documentElement.scrollHeight - document.documentElement.clientHeight,
+                scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        }
 
+        window.onscroll = function () {
+            progressBarScroll();
+        };
+    </script>
 </body>
 
 </html>
