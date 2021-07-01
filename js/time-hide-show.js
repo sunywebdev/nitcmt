@@ -58,7 +58,7 @@
                 
                 /***************** Class 1 start ******************/
             else if ((d === 0) && (n > '09:00:00' && n < '10:00:00')) {
-                $(".class-1").addClass("now").removeClass("old");
+                $(".class-1 .card").addClass("now").removeClass("old");
                 $('.sunday').show();
                 $('.tuesday').hide();
                 $('.thursday').hide();
@@ -73,7 +73,7 @@
                 $('.class-4 .class-ended').hide();
             }
             else if ((d === 2) && (n > '09:00:00' && n < '10:00:00')) {
-                $(".class-1").addClass("now").removeClass("old");
+                $(".class-1 .card").addClass("now").removeClass("old");
                 $('.sunday').hide();
                 $('.tuesday').show();
                 $('.thursday').hide();
@@ -88,7 +88,7 @@
                 $('.class-4 .class-ended').hide();
             }
             else if ((d === 4) && (n > '09:00:00' && n < '10:00:00')) {
-                $(".class-1").addClass("now").removeClass("old");
+                $(".class-1 .card").addClass("now").removeClass("old");
                 $('.sunday').hide();
                 $('.tuesday').hide();
                 $('.thursday').show();
@@ -106,7 +106,7 @@
 
                 /***************** Class 2 start ******************/
             else if ((d === 0) && (n > '10:00:00' && n < '11:00:00')) {
-                $(".class-2").addClass("now").removeClass("old");
+                $(".class-2 .card").addClass("now").removeClass("old");
                 $('.sunday').show();
                 $('.tuesday').hide();
                 $('.thursday').hide();
@@ -122,7 +122,7 @@
                
             }
             else if ((d === 2) && (n > '10:00:00' && n < '11:00:00')) {
-                $(".class-2").addClass("now").removeClass("old");
+                $(".class-2 .card").addClass("now").removeClass("old");
                 $('.sunday').hide();
                 $('.tuesday').show();
                 $('.thursday').hide();
@@ -138,7 +138,7 @@
                
             }
             else if ((d === 4) && (n > '10:00:00' && n < '11:00:00')) {
-                $(".class-2").addClass("now").removeClass("old");
+                $(".class-2 .card").addClass("now").removeClass("old");
                 $('.sunday').hide();
                 $('.tuesday').hide();
                 $('.thursday').show();
@@ -204,7 +204,7 @@
                 
                 /***************** Class 3 start ******************/
             else if ((d === 0) && (n > '11:30:00' && n < '12:30:00')) {
-                $(".class-3").addClass("now").removeClass("old");
+                $(".class-3 .card").addClass("now").removeClass("old");
                 $('.sunday').show();
                 $('.tuesday').hide();
                 $('.thursday').hide();
@@ -219,7 +219,7 @@
                 $('.class-4 .class-ended').hide();    
             }
             else if ((d === 2) && (n > '11:30:00' && n < '12:30:00')) {
-                $(".class-3").addClass("now").removeClass("old");
+                $(".class-3 .card").addClass("now").removeClass("old");
                 $('.sunday').hide();
                 $('.tuesday').show();
                 $('.thursday').hide();
@@ -234,7 +234,7 @@
                 $('.class-4 .class-ended').hide();    
             }
             else if ((d === 4) && (n > '11:30:00' && n < '12:30:00')) {
-                $(".class-3").addClass("now").removeClass("old");
+                $(".class-3 .card").addClass("now").removeClass("old");
                 $('.sunday').hide();
                 $('.tuesday').hide();
                 $('.thursday').show();
@@ -252,7 +252,7 @@
                 
                 /***************** Class 4 start ******************/
             else if ((d === 0) && (n > '12:30:00' && n < '13:30:00')) {
-                $(".class-4").addClass("now").removeClass("old");
+                $(".class-4 .card").addClass("now").removeClass("old");
                 $('.sunday').show();
                 $('.tuesday').hide();
                 $('.thursday').hide();
@@ -268,7 +268,7 @@
             
             }
             else if ((d === 2) && (n > '12:30:00' && n < '13:30:00')) {
-                $(".class-4").addClass("now").removeClass("old");
+                $(".class-4 .card").addClass("now").removeClass("old");
                 $('.sunday').hide();
                 $('.tuesday').show();
                 $('.thursday').hide();
@@ -284,7 +284,7 @@
             
             }
             else if ((d === 4) && (n > '12:30:00' && n < '13:30:00')) {
-                $(".class-4").addClass("now").removeClass("old");
+                $(".class-4 .card").addClass("now").removeClass("old");
                 $('.sunday').hide();
                 $('.tuesday').hide();
                 $('.thursday').show();
