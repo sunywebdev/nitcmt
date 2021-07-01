@@ -229,10 +229,11 @@ hr {
 }
 
 
-.hooray {
+.hooray,
+.no-exam {
     text-align: center;
     font-weight: 700;
-    animation: blink 1s linear infinite;
+    animation: blink 1.5s linear infinite;
 }
 
 @keyframes blink {
@@ -250,7 +251,8 @@ hr {
 }
 
 
-.hooray img {
+.hooray img,
+.no-exam img {
     display: block;
     margin-left: auto;
     margin-right: auto;

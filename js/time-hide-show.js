@@ -369,11 +369,7 @@
         $(document).ready(function () {
             running();
         });
-                $('.exam-1 .class-will-start').hide();
-                $('.exam-2 .class-will-start').hide();
-                $('.exam-3 .class-will-start').hide();
-                $('.exam-4 .class-will-start').hide();
-                $('.exam-1 .class-ended').show();
-                $('.exam-2 .class-ended').show();
-                $('.exam-3 .class-ended').show();
-                $('.exam-4 .class-ended').show();
+
+                $('.exam').hide();
+                $('.no-exam').show();
+                
