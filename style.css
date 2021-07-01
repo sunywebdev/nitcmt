@@ -229,8 +229,8 @@ hr {
 }
 
 
-.hooray,
-.no-exam {
+.hooray h2,
+.no-exam h2 {
     text-align: center;
     font-weight: 700;
     animation: blink 1.5s linear infinite;
