@@ -16,7 +16,7 @@ body {
 }
 
 
-/*=============popup start===============*/
+/*=============popup start===============
 .modal {
     border: 3px solid red;
 }
@@ -60,7 +60,7 @@ body {
 
 .close {}
 
-/*=============popup end===============*/
+=============popup end===============*/
 
 
 hr {
@@ -541,6 +541,13 @@ hr {
     .col-responsive {
         width: calc(100% / 2) !important;
         padding: 10px;
+    }
+
+    .full-body,
+    .top,
+    .footer {
+        border: 0;
+        border-radius: 0%;
     }
 
     .top h3 {
