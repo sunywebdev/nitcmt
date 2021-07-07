@@ -26,7 +26,7 @@ body {
 }
 
 .progress-bar {
-    background-color: #f7b300 !important;
+    background-color: green !important;
     height: 7px;
     width: 0%;
 }
