@@ -4,7 +4,7 @@ document.getElementById("submit-btn").addEventListener("click", function () {
     if (userId.length < 5 || password.length < 5) {
         document.getElementById("valid-warning").style.display = "block";
         document.getElementById("wrong-warning").style.display = "none";
-    } else if (userId.toLowerCase() == "computer" && password == 1234567) {
+    } else if (userId.toLowerCase().trim() == "computer" && password.trim() == 1234567) {
         window.location.href = "form.html";
         document.getElementById("wrong-warning").style.display = "none";
         document.getElementById("valid-warning").style.display = "none";
