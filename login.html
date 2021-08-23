@@ -30,7 +30,13 @@
             font-family: sans-serif;
         }
 
-        h1,
+        h1 {
+            color: White;
+            font-size: 4rem;
+            font-weight: bold;
+            text-shadow: 0 0 20px #fff, 0 0 30px #008000, 0 0 40px #008000, 0 0 50px #008000, 0 0 60px #008000, 0 0 70px #008000, 0 0 80px #008000;
+        }
+
         P {
             color: #fff;
         }
@@ -93,7 +99,7 @@
         <section>
             <div class="conatiner justify-content-center mx-auto row">
                 <div class="text-center col-md-6 col-11">
-                    <h1 class="py-2s">Login</h1>
+                    <h1 class="py-4">Login</h1>
                     <p class="fw-bold">For User ID and Password please ask in your <span class="text-danger">Facebook
                             Messenger
                             Group</span>
@@ -111,11 +117,14 @@
                                 <label for="floatingPassword">Password</label>
                             </div>
                             <button id="submit-btn" class="btn w-50 my-3 fw-bold">Submit</button>
-                            <div id="valid-warning" class="text-danger fw-bold" style="display: none;">
-                                Please Enter valid login info
+                            <div id="userid-wrong-warning" class="text-danger fw-bold" style="display: none;">
+                                Your User ID is incorrect
                             </div>
-                            <div id="wrong-warning" class="text-danger fw-bold" style="display: none;">
-                                Please Enter correct login info
+                            <div id="password-wrong-warning" class="text-danger fw-bold" style="display: none;">
+                                Your Password is incorrect
+                            </div>
+                            <div id="no-input-warning" class="text-danger fw-bold" style="display: none;">
+                                Your User Id and password Is incorrect
                             </div>
                         </div>
                 </div>
