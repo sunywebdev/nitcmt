@@ -10,12 +10,10 @@ document.getElementById("submit-btn").addEventListener("click", function () {
         userIdWrong.style.display = "none";
         passwordWrong.style.display = "none";
         emptyWarning.style.display = "none";
-
     } else if (userId.toLowerCase().trim() != "computer" && password.trim() != 1234567) {
         userIdWrong.style.display = "none";
         passwordWrong.style.display = "none";
         emptyWarning.style.display = "block";
-
     } else if (userId.toLowerCase().trim() != "computer") {
         userIdWrong.style.display = "block";
         passwordWrong.style.display = "none";
@@ -24,7 +22,6 @@ document.getElementById("submit-btn").addEventListener("click", function () {
         userIdWrong.style.display = "none";
         passwordWrong.style.display = "block";
         emptyWarning.style.display = "none";
-
     } else {
         userIdWrong.style.display = "none";
         passwordWrong.style.display = "none";
