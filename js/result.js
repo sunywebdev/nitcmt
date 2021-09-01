@@ -3336,8 +3336,15 @@ document.getElementById("submit").addEventListener("click", function () {
         `;
     } else {
         const singleResult = results.find(result => result.roll == rollNo);
-        resultOutput.innerText = `${singleResult.gpa}
+        if (result.roll != rollInput.value) {
+            resultOutput.innerText = ` 
+        Please Enter A Valid Roll Number
         `;
+        } else {
+            resultOutput.innerText = `${singleResult.gpa}
+        `;
+        }
     }
     rollInput.value = "";
+
 })
