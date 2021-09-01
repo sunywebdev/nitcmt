@@ -3336,7 +3336,7 @@ document.getElementById("submit").addEventListener("click", function () {
         `;
     } else {
         resultOutput.innerText = `
-        Please Enter A Valid Roll Number OF A NIT Student
+        Please Enter A Valid Roll Number Of Any NIT Student
         `;
     }
     const singleResult = results.find(result => result.roll == rollNo);
