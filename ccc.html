@@ -714,7 +714,6 @@
                         </script>
         ============= popup end ===============-->
     </div>
-    <div class="loader"></div>
 
     <script src=" https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -726,19 +725,11 @@
         src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js">
     </script>
     <script>
-        $('body').append('<div style="" id="loadingDiv"><div class="loader">Loading...</div></div>');
-        $(window).on('load', function () {
-            setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
-        });
-
-        function removeLoader() {
-            $("#loadingDiv").fadeOut(500, function () {
-                // fadeOut complete. Remove the loading div
-                $("#loadingDiv").remove(); //makes page more lightweight 
+        $(document).ready(function () {
+            $(".alert").on("mouseenter", function () {
+                location.reload();
             });
-        }
-        $(window).load(function () {
-            $('#loading').hide();
+
         });
     </script>
     <script src="js/refresh-time.js"></script>
