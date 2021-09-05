@@ -67,7 +67,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
 </head>
 
-<body class="loading">
+<body>
     <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
     </div>
@@ -751,18 +751,6 @@
         window.onscroll = function () {
             progressBarScroll();
         };
-    </script>
-    <script>
-        var body = document.getElementsByTagName('body')[0];
-        var removeLoading = function () {
-            // In a production application you would remove the loading class when your
-            // application is initialized and ready to go.  Here we just artificially wait
-            // 3 seconds before removing the class.
-            setTimeout(function () {
-                body.className = body.className.replace(/loading/, '');
-            }, 1000);
-        };
-        removeLoading();
     </script>
 </body>
 
