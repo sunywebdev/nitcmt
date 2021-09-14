@@ -3327,36 +3327,68 @@
         }
     ];
 
+    const rollInput = document.getElementById('roll');
+    const resultOutput = document.getElementById('result-out');
+    const gpa3_5 = document.getElementById('avobeGpa3.5+')
+    const minG = document.getElementById('min');
+    const maxG = document.getElementById('max');
+
     document.getElementById("submit").addEventListener("click", function () {
-        const rollInput = document.getElementById('roll');
-        const resultOutput = (document.getElementById('result'));
+        gpa3_5.innerText = "";
         const rollNo = parseInt(rollInput.value);
         if (rollInput.value == "") {
-            resultOutput.innerText = ` 
-        Please Enter A Roll Number
+            resultOutput.innerHTML = ` 
+        <p>Please Enter A Roll Number</p>
         `;
         } else {
-            resultOutput.innerText = `
-        Please Enter A Valid Roll Number Of Any NIT Student
+            resultOutput.innerHTML = `
+       <p> Please Enter A Valid Roll Number</p>
         `;
         }
         const singleResult = results.find(result => result.roll == rollNo);
-        resultOutput.innerText = `${singleResult.gpa}
+        resultOutput.innerHTML = `<h2>${singleResult.gpa}</h2>
         `;
 
         rollInput.value = "";
     })
 
-    document.getElementById("avobeGpa3.5").addEventListener("click", function () {
+    document.getElementById("submit-minMax").addEventListener("click", function () {
+        const min = parseFloat(minG.value);
+        const max = parseFloat(maxG.value);
+        console.log(min, max);
+
+        resultOutput.innerHTML = ""
+
+        if (minG.value == "") {
+            gpa3_5.innerHTML = ` 
+        Please Enter Min And Max GPA
+        `;
+        } else {
+            gpa3_5.innerHTML = `
+        `;
+        }
+        i = 0
         for (const result of results) {
-            if (parseFloat(result.gpa) >= 3.50 && parseFloat(result.gpa) <= 4.00) {
+
+            if (parseFloat(result.gpa) >= min && parseFloat(result.gpa) <= max) {
+                i++
                 const div = document.createElement("div");
                 div.classList.add("col");
                 div.innerHTML = `
                 <p>Roll no: ${result.roll} & GPA: ${result.gpa}</p>
         `;
-                (document.getElementById('avobeGpa3.5+')).appendChild(div)
+                gpa3_5.appendChild(div)
                 /* console.log(result.roll + result.gpa); */
+
             }
+
+            if (1 > min || 4 < max) {
+                gpa3_5.innerHTML = `
+            Please Enter Min And Max GPA between 1-4
+        `;
+            }
+
         }
+        document.getElementById("total").innerHTML = `Total Student : ${i}`;
+
     })

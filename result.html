@@ -30,10 +30,6 @@
             font-family: sans-serif;
         }
 
-        .conatiner {
-            width: 100%;
-        }
-
         h1 {
             color: White;
             font-size: 4rem;
@@ -41,18 +37,24 @@
             text-shadow: 0 0 20px #fff, 0 0 30px #008000, 0 0 40px #008000, 0 0 50px #008000, 0 0 60px #008000, 0 0 70px #008000, 0 0 80px #008000;
         }
 
-        h2 {
+        #result-out {
             color: White;
-            font-size: 2.5rem;
             font-weight: bold;
             text-shadow: 0 0 10px #fff, 0 0 15px #008000, 0 0 20px #008000, 0 0 25px #008000;
-            line-height: 1.5;
         }
 
         P {
             color: #fff;
         }
 
+        .form-floating,
+        button {
+            max-width: 460px;
+        }
+
+
+
+        .minMax input,
         .login input,
         label {
             border-radius: 11px;
@@ -101,25 +103,38 @@
     <!-- main section start -->
     <main>
         <section>
-            <div class="conatiner main-section justify-content-center mx-auto my-5 row">
-                <div class="text-center col-md-6 col-11">
+            <div class="container-fluid main-section justify-content-center mx-auto my-5 row">
+                <div class="d-flex align-items-center flex-column mx-auto">
                     <h1 class="py-4">Result</h1>
                     <p class="text-danger fw-bold">Only For NIT Students (4th Semester)</p>
-                    <div class="login">
-                        <div class="form-floating mb-3">
+                    <div class="login d-flex align-items-center flex-column mx-0 m w-100">
+                        <div class="form-floating m-1 w-100">
                             <input type="text" class="form-control" id="roll" placeholder="Enter Your Roll Number">
                             <label for="floatingInput">Enter Your Roll Number</label>
                         </div>
-                        <button id="submit" class="btn w-50 mt-3 fw-bold">Submit</button>
-                        <button id="avobeGpa3.5" class="btn w-50 mt-3 fw-bold">GPA 3.5 +</button>
+                        <button id="submit" class="btn mt-3 w-100 fw-bold">Submit</button>
                     </div>
-                    <h2 id="result"></h2>
-                    <p id="avobeGpa3.5+" class="mt-4"></p>
+                    <div id="result-out" class="pt-3 text-center"></div>
                 </div>
             </div>
-
         </section>
-
+        <section class="container-fluid mb-5">
+            <div class="minMax d-flex align-items-center flex-column mx-auto">
+                <div class="d-flex justify-content-center">
+                    <div class="form-floating m-1">
+                        <input type="text" class="form-control" id="min" placeholder="Min GPA">
+                        <label for="floatingInput">Min GPA</label>
+                    </div>
+                    <div class="form-floating m-1 ">
+                        <input type="text" class="form-control " id="max" placeholder="Max GPA">
+                        <label for="floatingInput">Max GPA</label>
+                    </div>
+                </div>
+                <button id="submit-minMax" class="btn w-100 mt-3 fw-bold">Submit</button>
+            </div>
+            <p id="total" class="mt-4 text-center"></p>
+            <p id="avobeGpa3.5+" class="mt-4 text-center"></p>
+        </section>
 
 
     </main>
