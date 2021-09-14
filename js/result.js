@@ -3330,6 +3330,7 @@
     const rollInput = document.getElementById('roll');
     const resultOutput = document.getElementById('result-out');
     const gpa3_5 = document.getElementById('avobeGpa3.5+')
+    const total = document.getElementById('total')
     const minG = document.getElementById('min');
     const maxG = document.getElementById('max');
 
@@ -3338,15 +3339,15 @@
         const rollNo = parseInt(rollInput.value);
         if (rollInput.value == "") {
             resultOutput.innerHTML = ` 
-        <p>Please Enter A Roll Number</p>
+        <h4>Please Enter A Roll Number</h4>
         `;
         } else {
             resultOutput.innerHTML = `
-       <p> Please Enter A Valid Roll Number</p>
+       <h4> Please Enter A Valid Roll Number</h4>
         `;
         }
         const singleResult = results.find(result => result.roll == rollNo);
-        resultOutput.innerHTML = `<h2>${singleResult.gpa}</h2>
+        resultOutput.innerHTML = `<h1>${singleResult.gpa}</h1>
         `;
 
         rollInput.value = "";
@@ -3364,8 +3365,7 @@
         Please Enter Min And Max GPA
         `;
         } else {
-            gpa3_5.innerHTML = `
-        `;
+            gpa3_5.innerHTML = ""
         }
         i = 0
         for (const result of results) {
@@ -3389,6 +3389,6 @@
             }
 
         }
-        document.getElementById("total").innerHTML = `Total Student : ${i}`;
+        total.innerHTML = `Total Student : ${i}`;
 
     })
