@@ -3329,13 +3329,12 @@
 
     const rollInput = document.getElementById('roll');
     const resultOutput = document.getElementById('result-out');
-    const gpa3_5 = document.getElementById('avobeGpa3.5+')
+    const gpa = document.getElementById('allGpa')
     const total = document.getElementById('total')
     const minG = document.getElementById('min');
     const maxG = document.getElementById('max');
 
     document.getElementById("submit").addEventListener("click", function () {
-        gpa3_5.innerText = "";
         const rollNo = parseInt(rollInput.value);
         if (rollInput.value == "") {
             resultOutput.innerHTML = ` 
@@ -3358,14 +3357,10 @@
         const max = parseFloat(maxG.value);
         console.log(min, max);
 
-        resultOutput.innerHTML = ""
-
-        if (minG.value == "") {
-            gpa3_5.innerHTML = ` 
+        if (minG.value == "" || maxG.value == "") {
+            gpa.innerHTML = ` 
         Please Enter Min And Max GPA
         `;
-        } else {
-            gpa3_5.innerHTML = ""
         }
         i = 0
         for (const result of results) {
@@ -3377,18 +3372,17 @@
                 div.innerHTML = `
                 <p>Roll no: ${result.roll} & GPA: ${result.gpa}</p>
         `;
-                gpa3_5.appendChild(div)
+                gpa.appendChild(div)
                 /* console.log(result.roll + result.gpa); */
 
             }
 
             if (1 > min || 4 < max) {
-                gpa3_5.innerHTML = `
-            Please Enter Min And Max GPA between 1-4
+                gpa.innerHTML = `
+           <p> Please enter Min and Max GPA between 1 and 4</p>
         `;
             }
 
         }
         total.innerHTML = `Total Student : ${i}`;
-
     })
