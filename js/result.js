@@ -3370,7 +3370,7 @@
                 const div = document.createElement("div");
                 div.classList.add("col");
                 div.innerHTML = `
-                <p>Roll no: ${result.roll} & GPA: ${result.gpa}</p>
+                <p>Roll No: ${result.roll} & GPA: ${result.gpa}</p>
         `;
                 gpa.appendChild(div)
                 /* console.log(result.roll + result.gpa); */
