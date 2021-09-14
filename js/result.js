@@ -1,4 +1,3 @@
-document.getElementById("submit").addEventListener("click", function () {
     const results = [{
             roll: 171783,
             gpa: `
@@ -3327,21 +3326,37 @@ document.getElementById("submit").addEventListener("click", function () {
      `
         }
     ];
-    const rollInput = document.getElementById('roll');
-    const resultOutput = (document.getElementById('result'));
-    const rollNo = parseInt(rollInput.value);
-    if (rollInput.value == "") {
-        resultOutput.innerText = ` 
+
+    document.getElementById("submit").addEventListener("click", function () {
+        const rollInput = document.getElementById('roll');
+        const resultOutput = (document.getElementById('result'));
+        const rollNo = parseInt(rollInput.value);
+        if (rollInput.value == "") {
+            resultOutput.innerText = ` 
         Please Enter A Roll Number
         `;
-    } else {
-        resultOutput.innerText = `
+        } else {
+            resultOutput.innerText = `
         Please Enter A Valid Roll Number Of Any NIT Student
         `;
-    }
-    const singleResult = results.find(result => result.roll == rollNo);
-    resultOutput.innerText = `${singleResult.gpa}
+        }
+        const singleResult = results.find(result => result.roll == rollNo);
+        resultOutput.innerText = `${singleResult.gpa}
         `;
 
-    rollInput.value = "";
-})
+        rollInput.value = "";
+    })
+
+    document.getElementById("avobeGpa3.5").addEventListener("click", function () {
+        for (const result of results) {
+            if (parseFloat(result.gpa) >= 3.50 && parseFloat(result.gpa) <= 4.00) {
+                const div = document.createElement("div");
+                div.classList.add("col");
+                div.innerHTML = `
+                <p>Roll no: ${result.roll} & GPA: ${result.gpa}</p>
+        `;
+                (document.getElementById('avobeGpa3.5+')).appendChild(div)
+                /* console.log(result.roll + result.gpa); */
+            }
+        }
+    })
