@@ -3325,64 +3325,67 @@
          
      `
         }
-    ];
+    ]
 
-    const rollInput = document.getElementById('roll');
-    const resultOutput = document.getElementById('result-out');
+    const rollInput = document.getElementById('roll')
+    const resultOutput = document.getElementById('result-out')
     const gpa = document.getElementById('allGpa')
     const total = document.getElementById('total')
-    const minG = document.getElementById('min');
-    const maxG = document.getElementById('max');
+    const minG = document.getElementById('min')
+    const maxG = document.getElementById('max')
 
     document.getElementById("submit").addEventListener("click", function () {
-        const rollNo = parseInt(rollInput.value);
+        const rollNo = parseInt(rollInput.value)
         if (rollInput.value == "") {
             resultOutput.innerHTML = ` 
         <h4>Please Enter A Roll Number</h4>
-        `;
+        `
         } else {
             resultOutput.innerHTML = `
        <h4> Please Enter A Valid Roll Number</h4>
-        `;
+        `
         }
-        const singleResult = results.find(result => result.roll == rollNo);
+        const singleResult = results.find(result => result.roll == rollNo)
         resultOutput.innerHTML = `<h1>${singleResult.gpa}</h1>
-        `;
+        `
 
-        rollInput.value = "";
+        rollInput.value = ""
     })
 
     document.getElementById("submit-minMax").addEventListener("click", function () {
-        const min = parseFloat(minG.value);
-        const max = parseFloat(maxG.value);
-        console.log(min, max);
+        gpa.innerHTML = ``
+        const min = parseFloat(minG.value)
+        const max = parseFloat(maxG.value)
+        console.log(min, max)
 
         if (minG.value == "" || maxG.value == "") {
             gpa.innerHTML = ` 
         Please Enter Min And Max GPA
-        `;
+        `
         }
         i = 0
         for (const result of results) {
-
             if (parseFloat(result.gpa) >= min && parseFloat(result.gpa) <= max) {
                 i++
-                const div = document.createElement("div");
-                div.classList.add("col");
+                const div = document.createElement("div")
+                div.classList.add("col")
                 div.innerHTML = `
                 <p>Roll No: ${result.roll} & GPA: ${result.gpa}</p>
-        `;
+        `
                 gpa.appendChild(div)
-                /* console.log(result.roll + result.gpa); */
+                /* console.log(result.roll + result.gpa) */
 
             }
 
             if (1 > min || 4 < max) {
                 gpa.innerHTML = `
            <p> Please enter Min and Max GPA between 1 and 4</p>
-        `;
+        `
             }
 
         }
-        total.innerHTML = `Total Student : ${i}`;
+        total.innerHTML = `Total Student : ${i}`
     })
+
+    /*  minG.value == ""
+        maxG.value == "" */
