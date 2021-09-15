@@ -1568,11 +1568,11 @@
         } else if (std2Result > 4 || std2Result < 0) {
             compare.innerHTML = `<h1>${stdInput2} is failed in exam but ${stdInput1} got ${std1Result}</h1>`
         } else if (std1Result > std2Result) {
-            compare.innerHTML = `<h1>${stdInput1} done  ${((25*std1Result).toFixed(2)) - ((25*std2Result).toFixed(2))}%   beter result than ${stdInput2}</h1>`
+            compare.innerHTML = `<h1>${stdInput1}<small>(${std1Result})</small> done  ${((25*std1Result).toFixed(2)) - ((25*std2Result).toFixed(2))}%   beter result than ${stdInput2}<small>(${std2Result})</small></h1>`
         } else if (std1Result < std2Result) {
-            compare.innerHTML = `<h1>${stdInput2} done  ${(25*std2Result).toFixed(2) - (25*std1Result).toFixed(2)}%   beter result than ${stdInput1}</h1>`
+            compare.innerHTML = `<h1>${stdInput2}<small>(${std2Result})</small> done  ${(25*std2Result).toFixed(2) - (25*std1Result).toFixed(2)}%   beter result than ${stdInput1}<small>(${std1Result})</small></h1>`
         } else if (std1Result == std2Result) {
-            compare.innerHTML = `<h1>${stdInput2} and ${stdInput1} both have same GPA</h1>`
+            compare.innerHTML = `<h1>${stdInput2}<small>(${std2Result})</small> and ${stdInput1}<small>(${std1Result})</small> both have same GPA</h1>`
         }
 
 
