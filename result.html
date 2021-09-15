@@ -70,7 +70,7 @@
             color: white;
         }
 
-        /* for input number arrow buttons */
+        /* for hiding input number arrow buttons */
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
             /* display: none; <- Crashes Chrome on hover */
@@ -106,7 +106,7 @@
                             <label for="floatingInput">Enter Your Roll Number</label>
                         </div>
                         <button id="submit" class="btn mt-3 w-100 fw-bold" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop1">Submit</button>
+                            data-bs-target="#staticBackdrop1">Get Result</button>
                     </div>
                     <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false"
                         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -115,8 +115,8 @@
                                 <div class="modal-header">
                                     <h1 class="modal-title fw-bold mx-auto" id="exampleModalLabel">Result !!!</h1>
                                 </div>
-                                <div class="modal-body">
-                                    <div id="result-out" class="py-3 text-center fw-bold"></div>
+                                <div class="modal-body text-center">
+                                    <div id="result-out" class="py-3 fw-bold"></div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary w-75 mx-auto"
@@ -143,18 +143,18 @@
                     </div>
                 </div>
                 <button id="submit-minMax" class="btn w-100 mt-3 fw-bold" data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop2">Submit</button>
+                    data-bs-target="#staticBackdrop2">Get Details</button>
             </div>
             <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false"
                 tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fw-bold mx-auto" id="exampleModalLabel">Result !!!</h1>
+                            <h1 class="modal-title fw-bold mx-auto" id="exampleModalLabel">Details Result !!!</h1>
                         </div>
-                        <div class="modal-body">
-                            <h2 id="total" class="my-1 mb-3 text-center fw-bold text-success"></h2>
-                            <p id="allGpa" class="my-2 text-center"></p>
+                        <div class="modal-body text-center">
+                            <h2 id="total" class="my-1 mb-3 fw-bold text-success"></h2>
+                            <p id="allGpa" class="my-2"></p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary w-75 mx-auto"
@@ -164,9 +164,9 @@
                 </div>
             </div>
         </section>
-        <!--         <section class="container-fluid mb-5">
+        <section class="container-fluid mb-5">
             <div class="minMax d-flex align-items-center flex-column mx-auto">
-                <h2 class="pt-4 pb-2 text-light fw-bold">GPA details from Min to Max</h2>
+                <h2 class="pt-4 pb-2 text-light fw-bold">Compare Between Two Student</h2>
                 <div class="d-flex justify-content-center">
                     <div class="form-floating m-1">
                         <input type="text" class="form-control" id="std1" placeholder="1st Student Roll">
@@ -177,11 +177,27 @@
                         <label for="floatingInput">2nd Student Roll</label>
                     </div>
                 </div>
-                <button id="submit-std" class="btn w-100 mt-3 fw-bold">Submit</button>
+                <button id="submit-std" class="btn w-100 mt-3 fw-bold" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop3">Compare</button>
             </div>
-            <div id="compare1" class="text-light"></div>
-            <div id="compare2" class="text-light"></div>
-        </section> -->
+            <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fw-bold mx-auto" id="exampleModalLabel">Compare Result !!!</h1>
+                        </div>
+                        <div class="modal-body text-center">
+                            <div id="compare" class="text-success"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary w-75 mx-auto"
+                                data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
     <!-- main section end -->

@@ -1509,7 +1509,10 @@
     const compare1 = document.getElementById('compare1')
     const compare2 = document.getElementById('compare2')
     const submitStd = document.getElementById('submit-std')
+    const compare = document.getElementById('compare')
 
+
+    /* Single student gpa find */
     document.getElementById("submit").addEventListener("click", function () {
         const rollNo = parseInt(rollInput.value)
         if (rollInput.value == "") {
@@ -1524,6 +1527,7 @@
         rollInput.value = ""
     })
 
+   /*  Get gpa details using min and max gpa */
     document.getElementById("submit-minMax").addEventListener("click", function () {
         gpa.innerHTML = ``
         const min = parseFloat(minG.value)
@@ -1547,6 +1551,18 @@
         total.innerHTML = `Total Student : ${i}`
     })
 
-    /*  minG.value == ""   maxG.value == "" */
 
-    /*     document.getElementById("submit-std").addEventListener("click",function () { const stdInput1 = parseInt(std1.value) const stdInput2 = parseInt(std2.value) const result1 = results.find(result => result.roll == stdInput1) compare1.innerHTML =`<h1>${result1.gpa}</h1>`const result2 = results.find(result => result.roll == stdInput2) compare2.innerHTML =`<h1>${result2.gpa}</h1>`  }) */
+/* compare between two student */
+    document.getElementById("submit-std").addEventListener("click", function () {
+        const stdInput1 = parseInt(std1.value)
+        const stdInput2 = parseInt(std2.value)
+        const result1 = results.find(result => result.roll == stdInput1)
+        const result2 = results.find(result => result.roll == stdInput2)
+        if (result1.gpa > result2.gpa) {
+            compare.innerHTML = `<h1>${stdInput1} done  ${((25*result1.gpa).toFixed(2)) - ((25*result2.gpa).toFixed(2))}%   beter result than ${stdInput2}</h1>`
+        } else if (result1.gpa < result2.gpa) {
+            compare.innerHTML = `<h1>${stdInput2} done  ${(25*result2.gpa).toFixed(2) - (25*result1.gpa).toFixed(2)}%   beter result than ${stdInput1}</h1>`
+        } else {
+            compare.innerHTML = `<h1>${stdInput2} and ${stdInput1} both have same GPA</h1>`
+        }
+    })
