@@ -1549,8 +1549,6 @@
             }
         }
         total.innerHTML = `Total Student : ${i}`
-        minG.value = ""
-        maxG.value = ""
     })
 
 
