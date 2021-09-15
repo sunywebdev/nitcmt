@@ -3333,6 +3333,11 @@
     const total = document.getElementById('total')
     const minG = document.getElementById('min')
     const maxG = document.getElementById('max')
+    const std1 = document.getElementById('std1')
+    const std2 = document.getElementById('std2')
+    const compare1 = document.getElementById('compare1')
+    const compare2 = document.getElementById('compare2')
+    const submitStd = document.getElementById('submit-std')
 
     document.getElementById("submit").addEventListener("click", function () {
         const rollNo = parseInt(rollInput.value)
@@ -3348,7 +3353,6 @@
         const singleResult = results.find(result => result.roll == rollNo)
         resultOutput.innerHTML = `<h1>${singleResult.gpa}</h1>
         `
-
         rollInput.value = ""
     })
 
@@ -3389,3 +3393,12 @@
 
     /*  minG.value == ""
         maxG.value == "" */
+
+    /*     document.getElementById("submit-std").addEventListener("click", function () {
+            const stdInput1 = parseInt(std1.value)
+            const stdInput2 = parseInt(std2.value)
+            const result1 = results.find(result => result.roll == stdInput1)
+            compare1.innerHTML = `<h1>${result1.gpa}</h1>`
+            const result2 = results.find(result => result.roll == stdInput2)
+            compare2.innerHTML = `<h1>${result2.gpa}</h1>`
+        }) */
