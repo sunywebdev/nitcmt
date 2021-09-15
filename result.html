@@ -69,6 +69,20 @@
         .btn:hover {
             color: white;
         }
+
+        /* for input number arrow buttons */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            /* display: none; <- Crashes Chrome on hover */
+            -webkit-appearance: none;
+            margin: 0;
+            /* <-- Apparently some margin are still there even though it's hidden */
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+            /* Firefox */
+        }
     </style>
 </head>
 
@@ -88,7 +102,7 @@
                     <p class="text-danger fw-bold">Only For NIT Students (4th Semester)</p>
                     <div class="login d-flex align-items-center flex-column mx-0 m w-100">
                         <div class="form-floating m-1 w-100">
-                            <input type="text" class="form-control" id="roll" placeholder="Enter Your Roll Number">
+                            <input type="number" class="form-control" id="roll" placeholder="Enter Your Roll Number">
                             <label for="floatingInput">Enter Your Roll Number</label>
                         </div>
                         <button id="submit" class="btn mt-3 w-100 fw-bold" data-bs-toggle="modal"
@@ -120,11 +134,11 @@
                 <h2 class="pt-4 pb-2 text-light fw-bold">GPA details from Min to Max</h2>
                 <div class="d-flex justify-content-center">
                     <div class="form-floating m-1">
-                        <input type="text" class="form-control" id="min" placeholder="Min GPA">
+                        <input type="number" class="form-control" id="min" placeholder="Min GPA">
                         <label for="floatingInput">Min GPA</label>
                     </div>
                     <div class="form-floating m-1 ">
-                        <input type="text" class="form-control " id="max" placeholder="Max GPA">
+                        <input type="number" class="form-control " id="max" placeholder="Max GPA">
                         <label for="floatingInput">Max GPA</label>
                     </div>
                 </div>
