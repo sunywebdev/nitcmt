@@ -1533,22 +1533,23 @@
         const min = parseFloat(minG.value)
         const max = parseFloat(maxG.value)
         if (minG.value == "" || maxG.value == "") {
-            gpa.innerHTML = `Please Enter Min And Max GPA`
-        }
-        i = 0
-        for (const result of results) {
-            if (parseFloat(result.gpa) >= min && parseFloat(result.gpa) <= max) {
-                i++
-                const div = document.createElement("div")
-                div.classList.add("col")
-                div.innerHTML = `<p>Roll No: ${result.roll} & GPA: ${result.gpa}</p>`
-                gpa.appendChild(div) /* console.log(result.roll + result.gpa) */
+            gpa.innerHTML = `<h3 class="text-danger">Please Enter Min And Max GPA</h3>`
+        } else {
+            i = 0
+            for (const result of results) {
+                if (parseFloat(result.gpa) >= min && parseFloat(result.gpa) <= max) {
+                    i++
+                    const div = document.createElement("div")
+                    div.classList.add("col")
+                    div.innerHTML = `<p>Roll No: ${result.roll} & GPA: ${result.gpa}</p>`
+                    gpa.appendChild(div) /* console.log(result.roll + result.gpa) */
+                }
+                if (1 > min || 4 < max) {
+                    gpa.innerHTML = `<h3 class="text-danger">Please enter Min and Max GPA between 1 and 4</h3>`
+                }
             }
-            if (1 > min || 4 < max) {
-                gpa.innerHTML = `<p> Please enter Min and Max GPA between 1 and 4</p>`
-            }
+            total.innerHTML = `Total Student : ${i}`
         }
-        total.innerHTML = `Total Student : ${i}`
     })
 
 
