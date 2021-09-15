@@ -1556,13 +1556,24 @@
     document.getElementById("submit-std").addEventListener("click", function () {
         const stdInput1 = parseInt(std1.value)
         const stdInput2 = parseInt(std2.value)
+        if (results.roll != stdInput1 || results.roll != stdInput2) {
+            compare.innerHTML = `<h1>Roll No is not valid</h1>`
+        }
         const result1 = results.find(result => result.roll == stdInput1)
         const result2 = results.find(result => result.roll == stdInput2)
-        if (result1.gpa > result2.gpa) {
-            compare.innerHTML = `<h1>${stdInput1} done  ${((25*result1.gpa).toFixed(2)) - ((25*result2.gpa).toFixed(2))}%   beter result than ${stdInput2}</h1>`
-        } else if (result1.gpa < result2.gpa) {
-            compare.innerHTML = `<h1>${stdInput2} done  ${(25*result2.gpa).toFixed(2) - (25*result1.gpa).toFixed(2)}%   beter result than ${stdInput1}</h1>`
-        } else {
+        const std1Result = parseFloat(result1.gpa)
+        const std2Result = parseFloat(result2.gpa)
+        if (std1Result > 4 || std1Result < 0) {
+            compare.innerHTML = `<h1>${stdInput1} is failed in exam but ${stdInput2} got ${std2Result}</h1>`
+        } else if (std2Result > 4 || std2Result < 0) {
+            compare.innerHTML = `<h1>${stdInput2} is failed in exam but ${stdInput1} got ${std1Result}</h1>`
+        } else if (std1Result > std2Result) {
+            compare.innerHTML = `<h1>${stdInput1} done  ${((25*std1Result).toFixed(2)) - ((25*std2Result).toFixed(2))}%   beter result than ${stdInput2}</h1>`
+        } else if (std1Result < std2Result) {
+            compare.innerHTML = `<h1>${stdInput2} done  ${(25*std2Result).toFixed(2) - (25*rstd1Result).toFixed(2)}%   beter result than ${stdInput1}</h1>`
+        } else if (std1Result == std2Result) {
             compare.innerHTML = `<h1>${stdInput2} and ${stdInput1} both have same GPA</h1>`
         }
+
+
     })
