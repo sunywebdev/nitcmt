@@ -1518,7 +1518,9 @@
             resultOutput.innerHTML = `<h4> Please Enter A Valid Roll Number</h4>`
         }
         const singleResult = results.find(result => result.roll == rollNo)
-        resultOutput.innerHTML = `<h1>${singleResult.gpa}</h1>  `
+        resultOutput.innerHTML = `
+        <h1 class="text-success fw-bold">Roll No: ${singleResult.roll}</h1> 
+        <h1>${singleResult.gpa}</h1>  `
         rollInput.value = ""
     })
 
