@@ -1570,7 +1570,7 @@
         } else if (std1Result > std2Result) {
             compare.innerHTML = `<h1>${stdInput1} done  ${((25*std1Result).toFixed(2)) - ((25*std2Result).toFixed(2))}%   beter result than ${stdInput2}</h1>`
         } else if (std1Result < std2Result) {
-            compare.innerHTML = `<h1>${stdInput2} done  ${(25*std2Result).toFixed(2) - (25*rstd1Result).toFixed(2)}%   beter result than ${stdInput1}</h1>`
+            compare.innerHTML = `<h1>${stdInput2} done  ${(25*std2Result).toFixed(2) - (25*std1Result).toFixed(2)}%   beter result than ${stdInput1}</h1>`
         } else if (std1Result == std2Result) {
             compare.innerHTML = `<h1>${stdInput2} and ${stdInput1} both have same GPA</h1>`
         }
