@@ -1523,11 +1523,11 @@
         const singleResult = results.find(result => result.roll == rollNo)
         resultOutput.innerHTML = `
         <h1 class="text-success fw-bold">Roll No: ${singleResult.roll}</h1> 
-        <h1>${singleResult.gpa}</h1>  `
+        <h1 class="text-success fw-bold">GPA: ${singleResult.gpa}</h1>  `
         rollInput.value = ""
     })
 
-   /*  Get gpa details using min and max gpa */
+    /*  Get gpa details using min and max gpa */
     document.getElementById("submit-minMax").addEventListener("click", function () {
         gpa.innerHTML = ``
         const min = parseFloat(minG.value)
@@ -1552,7 +1552,7 @@
     })
 
 
-/* compare between two student */
+    /* compare between two student */
     document.getElementById("submit-std").addEventListener("click", function () {
         const stdInput1 = parseInt(std1.value)
         const stdInput2 = parseInt(std2.value)

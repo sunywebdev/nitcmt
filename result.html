@@ -89,46 +89,46 @@
 <body>
     <!-- header section start -->
     <header>
-
+        <p class="text-danger fw-bold text-center py-3">Only For NIT Students (4th Semester)</p>
     </header>
     <!-- header section end -->
 
     <!-- main section start -->
     <main>
-        <section>
-            <div class="container-fluid main-section mx-auto mt-5">
-                <div class="d-flex align-items-center flex-column mx-auto">
-                    <h2 class="pt-4 pb-2 text-light fw-bold">Get Result</h2>
-                    <p class="text-danger fw-bold">Only For NIT Students (4th Semester)</p>
-                    <div class="login d-flex align-items-center flex-column mx-0 m w-100">
-                        <div class="form-floating m-1 w-100">
-                            <input type="number" class="form-control" id="roll" placeholder="Enter Your Roll Number">
-                            <label for="floatingInput">Enter Your Roll Number</label>
-                        </div>
-                        <button id="submit" class="btn mt-3 w-100 fw-bold" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop1">Get Result</button>
+        <!--    Single student gpa find -->
+        <section class="container-fluid main-section mx-auto mt-5">
+            <div class="d-flex align-items-center flex-column mx-auto">
+                <h2 class="pt-4 pb-2 text-light fw-bold">Get Result</h2>
+                <div class="login d-flex align-items-center flex-column mx-0 m w-100">
+                    <div class="form-floating m-1 w-100">
+                        <input type="number" class="form-control" id="roll" placeholder="Enter Your Roll Number">
+                        <label for="floatingInput">Enter Your Roll Number</label>
                     </div>
-                    <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false"
-                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fw-bold mx-auto" id="exampleModalLabel">Result !!!</h1>
-                                </div>
-                                <div class="modal-body text-center">
-                                    <div id="result-out" class="py-3 fw-bold"></div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary w-75 mx-auto"
-                                        data-bs-dismiss="modal">Close</button>
-                                </div>
+                    <button id="submit" class="btn mt-3 w-100 fw-bold" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop1">Get Result</button>
+                </div>
+                <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fw-bold mx-auto" id="exampleModalLabel">Result !!!</h1>
+                            </div>
+                            <div class="modal-body text-center">
+                                <div id="result-out" class="py-3 fw-bold"></div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary w-75 mx-auto"
+                                    data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
-                    <div id="result-out" class="pt-4 text-center"></div>
                 </div>
+                <div id="result-out" class="pt-4 text-center"></div>
             </div>
         </section>
+
+        <!-- Get gpa details using min and max gpa -->
         <section class="container-fluid mb-5">
             <div class="minMax d-flex align-items-center flex-column mx-auto">
                 <h2 class="pt-4 pb-2 text-light fw-bold">GPA details from Min to Max</h2>
@@ -164,6 +164,8 @@
                 </div>
             </div>
         </section>
+
+        <!--  compare between two student -->
         <section class="container-fluid mb-5">
             <div class="minMax d-flex align-items-center flex-column mx-auto">
                 <h2 class="pt-4 pb-2 text-light fw-bold">Compare Between Two Student</h2>
