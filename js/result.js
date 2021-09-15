@@ -1547,6 +1547,8 @@
                 if (1 > min || 4 < max) {
                     gpa.innerHTML = `<h3 class="text-danger">Please enter Min and Max GPA between 1 and 4</h3>`
                 }
+                minG.value = ""
+                maxG.value = ""
             }
             total.innerHTML = `Total Student : ${i}`
         }
