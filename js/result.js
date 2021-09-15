@@ -1557,8 +1557,13 @@
     document.getElementById("submit-std").addEventListener("click", function () {
         const stdInput1 = parseInt(std1.value)
         const stdInput2 = parseInt(std2.value)
-        if (results.roll != stdInput1 || results.roll != stdInput2) {
-            compare.innerHTML = `<h1>Roll No is not valid</h1>`
+        for (let result of results) {
+            if (result.roll != stdInput1 || result.roll != stdInput2) {
+                compare.innerHTML = `<h3 class="text-danger">Please enter both Roll No correctly to compare</h3>`
+            }
+            if (std1.value == "" || std2.value == "") {
+                compare.innerHTML = `<h3 class="text-danger">Please enter both Roll No to compare</h3>`
+            }
         }
         const result1 = results.find(result => result.roll == stdInput1)
         const result2 = results.find(result => result.roll == stdInput2)
@@ -1575,6 +1580,7 @@
         } else if (std1Result == std2Result) {
             compare.innerHTML = `<h1>${stdInput2}<small>(${std2Result})</small> and ${stdInput1}<small>(${std1Result})</small> both have same GPA</h1>`
         }
-
+        std1.value = ""
+        std2.value = ""
 
     })
