@@ -27,9 +27,9 @@ const compare = document.getElementById('compare')
 document.getElementById("submit").addEventListener("click", function () {
     const rollNo = parseInt(rollInput.value)
     if (rollInput.value == "") {
-        resultOutput.innerHTML = `<h4>Please Enter A Roll Number</h4>`
+        resultOutput.innerHTML = `<h4 class="text-danger">Please Enter A Roll Number</h4>`
     } else {
-        resultOutput.innerHTML = `<h4> Please Enter A Valid Roll Number</h4>`
+        resultOutput.innerHTML = `<h4 class="text-danger"> Please Enter A Valid Roll Number</h4>`
     }
     const singleResult = results.find(result => result.roll == rollNo)
     resultOutput.innerHTML = `
