@@ -82,10 +82,12 @@ document.getElementById("submit-std").addEventListener("click", function () {
     const result2 = results.find(result => result.roll == stdInput2)
     const std1Result = parseFloat(result1.gpa)
     const std2Result = parseFloat(result2.gpa)
-    if (std1Result > 4 || std1Result < 0) {
-        compare.innerHTML = `<h1>${stdInput1} is failed in exam but ${stdInput2} got ${std2Result}</h1>`
+    if ((std1Result > 4 || std1Result < 0) && (std2Result > 4 || std2Result < 0)) {
+        compare.innerHTML = `<h1>${stdInput2} and ${stdInput1} both failed in exam.</h1>`
     } else if (std2Result > 4 || std2Result < 0) {
         compare.innerHTML = `<h1>${stdInput2} is failed in exam but ${stdInput1} got ${std1Result}</h1>`
+    } else if (std1Result > 4 || std1Result < 0) {
+        compare.innerHTML = `<h1>${stdInput1} is failed in exam but ${stdInput2} got ${std2Result}</h1>`
     } else if (std1Result > std2Result) {
         compare.innerHTML = `<h1>${stdInput1}<small>(${std1Result})</small> done  ${((25*std1Result).toFixed(2)) - ((25*std2Result).toFixed(2))}%   beter result than ${stdInput2}<small>(${std2Result})</small></h1>`
     } else if (std1Result < std2Result) {
